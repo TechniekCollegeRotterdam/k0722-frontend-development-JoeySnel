@@ -1,5 +1,6 @@
 @import "_color";
 @import "_nav";
+@import "_aside";
 
 * {
     box-sizing: border-box;
@@ -41,15 +42,20 @@
                     }
                 }
 
-                button {
-                    display: block;
-                    background-color: $accent;
-                    border: none;
-                    border-radius: 20px;
-                    color: white;
-                    font-size: 18px;
-                    padding: 10px 20px;
-                    margin-top: 10px;
+                a {
+                    text-decoration: none;
+
+                    #download {
+                        display: block;
+                        background-color: $accent;
+                        border: none;
+                        border-radius: 20px;
+                        color: white;
+                        font-size: 18px;
+                        padding: 10px 20px;
+                        margin-top: 10px;
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -67,7 +73,7 @@
 
                 .skill {
                     width: 100%;
-                    height: 35px;
+                    height: 40px;
                     background-color: rgba(0, 0, 0, 0.15);
                     border-radius: 3px;
                     overflow: hidden;
@@ -92,7 +98,7 @@
                     }
 
                     #php {
-                        width: 70%;
+                        width: 50%;
                         height: 100%;
                         background-color: $accent;
                         text-align: right;
@@ -108,6 +114,15 @@
                         padding: 9px;
                         color: $background;
                     }
+
+                    #sql {
+                        width: 50%;
+                        height: 100%;
+                        background-color: $accent;
+                        text-align: right;
+                        padding: 9px;
+                        color: $background;
+                    }
                 }
             }
 
@@ -116,7 +131,7 @@
                     margin-bottom: 20px;
                 }
 
-                p{
+                p {
                     margin-bottom: 20px;
                     font-size: 18px;
                 }
@@ -126,10 +141,35 @@
                 }
 
                 video {
-                    // display: block;
                     width: 100%;
                     z-index: -1;
-                    // height: auto;
+                }
+            }
+
+            .links {
+
+                h2 {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    li {
+                        list-style: none;
+                        margin-bottom: 20px;
+
+                        a {
+                            font-size: 18px;
+                            text-decoration: none;
+                            color: $accent;
+
+                            img {
+                                width: 35px;
+                                height: auto;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -152,11 +192,9 @@
                     margin-top: 20px;
 
                     input {
-                        // width: 100%;
                         height: 50px;
                         border: none;
                         border-radius: 2px;
-                        // margin-bottom: 10px;
                         background-color: rgba(0, 0, 0, 0.15);
                         font-size: 18px;
                         padding: 0 10px;
@@ -186,6 +224,7 @@
                         caret-color: $font1;
                         overflow-y: scroll;
                         resize: none;
+                        overflow: auto;
                     }
 
                     textarea::placeholder {
@@ -204,33 +243,172 @@
                         right: 0;
                         background-color: $accent;
                         color: $background;
-
+                        cursor: pointer;
                     }
                 }
             }
         }
     }
 
-    @media only screen and (min-width: 769px) {
+    @media only screen and (min-width: 636px) {
 
         body {
+
+            nav {
+                display: none;
+            }
+
             display: grid;
-            grid-template-columns: 50px auto;
-            grid-template-areas:
-                "aside"
-                "main";
+            grid-template-columns: 80vw;
+            grid-template-areas: "main";
+            justify-content: center;
+            // align-items: center;
 
             aside {
                 display: none;
+            }
 
-                //     ul {
-                //         li {}
-                //     }
-                // }
+            main {
+                margin: 0 auto;
+                padding: 100px 30px 50px;
+                row-gap: 150px;
 
-                // main {
-                //     section {}
-                // }
+                .about {
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                    column-gap: 50px;
+
+                    img {
+                        width: 250px;
+                        margin: 0;
+                        border-radius: 5px;
+
+                    }
+
+                    .hello {
+                        padding: 0;
+                        margin: auto 0 0px;
+
+                        h1 {
+                            font-size: 32px;
+                        }
+
+                        p {
+                            font-size: 20px;
+                        }
+
+                        #download {
+                            font-size: 24px;
+                            margin-top: 25px;
+                        }
+                    }
+                }
+
+                .skills {
+
+                    h2 {
+                        font-size: 30px;
+                    }
+
+                    label {
+                        font-size: 20px;
+                    }
+
+                    .skill {
+                        height: 50px;
+                        margin: 10px 0 20px;
+                    }
+                }
+
+                .portfolio {
+                    h2 {
+                        font-size: 30px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                    }
+
+                    h3 {
+                        margin-bottom: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+                .contact {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+
+                    form {
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        row-gap: 15px;
+                        column-gap: 2.4%;
+
+                        input {
+                            flex-shrink: 0;
+                            height: 50px;
+                            font-size: 20px;
+                        }
+
+                        #name {
+                            width: 48.8%;
+                        }
+
+                        #email {
+                            width: 48.8%;
+                        }
+
+                        #subject {
+                            width: 100%;
+                        }
+
+                        textarea {
+                            width: 100%;
+                            font-size: 20px;
+                        }
+
+                        #send {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .links {
+                    a {
+                        font-size: 20px;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    @media only screen and (min-width: 769px) {
+        body {
+            main {
+                margin: 0 auto;
+                padding: 100px 100px;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1025px) {
+        body {
+            main {
+                margin: 0 auto;
+                padding: 100px 200px;
             }
         }
     }

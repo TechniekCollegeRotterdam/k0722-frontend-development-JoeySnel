@@ -10,7 +10,9 @@
 </head>
 
 <body id="body">
-    <?php include "nav.html" ?>
+    <div id="nav-placeholder"></div>
+    <div id="aside-placeholder"></div>
+
     <main>
         <section class="about">
             <img src="img/IMG_7302.jpeg">
@@ -19,8 +21,12 @@
                 <p>
                     Gedreven software developer in opleiding.
                 </p>
+                <a href="document/joeysnel_cv.pdf" download>
+                    <!-- <button>Download mijn CV!</button> -->
+                    <input type="submit" name="download" id="download" value="Download mijn CV!">
+                </a>
             </div>
-            <button><a href=""></a>Download mijn CV</button>
+            <!-- <button onclick="location.href='document/joeysnel_cv.pdf';">Bekijk mijn CV!</button> -->
         </section>
         <section class="skills">
             <h2>Mijn Skills</h2>
@@ -34,14 +40,19 @@
                 <div id="css">80%</div>
             </div>
 
-            <label for="php">PHP</label>
-            <div class="skill">
-                <div id="php">70%</div>
-            </div>
-
             <label for="js">Javascript</label>
             <div class="skill">
                 <div id="js">70%</div>
+            </div>
+
+            <label for="php">PHP</label>
+            <div class="skill">
+                <div id="php">50%</div>
+            </div>
+
+            <label for="sql">SQL</label>
+            <div class="skill">
+                <div id="sql">50%</div>
             </div>
         </section>
         <section class="portfolio">
@@ -49,7 +60,24 @@
             <p>Een aantal recente projecten waar ik trots op bent. Voorlopig zal deze enkel bestaan uit schoolprojecten,
                 maar in de toekomst zal ik hier nog veel meer aan toevoegen.</p>
             <h3>Javascript game</h3>
-            <video src="img/fighting-game-recording.mp4" controls autoplay></video>
+            <video id="my-video" src="img/fighting-game-recording.mp4" controls alt="Fighting-game video"></video>
+        </section>
+        <section class="links">
+            <h2>Links</h2>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/joey-snel-5600b3236/"><img src="img/svg/linkedin-brands.svg"
+                            alt="Mijn LinkedIn">https://www.linkedin.com/in/joey-snel-5600b3236/</a>
+                </li>
+                <li>
+                    <a href="https://github.com/JoeySnel"><img src="img/svg/github-brands.svg"
+                            alt="Mijn GitHub">https://github.com/JoeySnel</a>
+                </li>
+                <li>
+                    <a href="mailto:joey_snel@outlook.com, 9016797@student.zadkine.nl"><img
+                            src="img/svg/paper-plane-solid.svg" alt="Mijn Mail">joey_snel@outlook.com</a>
+                </li>
+            </ul>
         </section>
         <section class="contact">
             <h2>Contact</h2>
@@ -67,7 +95,18 @@
             </form>
         </section>
     </main>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+    <!-- <script>
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });
+    </script>
+    <script>
+        $(function () {
+            $("#aside-placeholder").load("aside.html");
+        });
+    </script> -->
 </body>
 
 </html>

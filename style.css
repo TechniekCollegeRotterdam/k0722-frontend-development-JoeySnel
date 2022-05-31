@@ -112,6 +112,51 @@ nav ul .links a img {
   width: auto;
 }
 
+aside {
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  height: auto;
+  width: 55px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+aside ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  row-gap: 25px;
+}
+
+aside ul li {
+  height: 35px;
+}
+
+aside ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+aside ul li a img {
+  height: 100%;
+  width: auto;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -160,7 +205,11 @@ nav ul .links a img {
   color: #00000080;
 }
 
-* body main .about button {
+* body main .about a {
+  text-decoration: none;
+}
+
+* body main .about a #download {
   display: block;
   background-color: #0088ff;
   border: none;
@@ -169,6 +218,7 @@ nav ul .links a img {
   font-size: 18px;
   padding: 10px 20px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 * body main .skills {
@@ -186,7 +236,7 @@ nav ul .links a img {
 
 * body main .skills .skill {
   width: 100%;
-  height: 35px;
+  height: 40px;
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   overflow: hidden;
@@ -212,7 +262,7 @@ nav ul .links a img {
 }
 
 * body main .skills .skill #php {
-  width: 70%;
+  width: 50%;
   height: 100%;
   background-color: #0088ff;
   text-align: right;
@@ -222,6 +272,15 @@ nav ul .links a img {
 
 * body main .skills .skill #js {
   width: 70%;
+  height: 100%;
+  background-color: #0088ff;
+  text-align: right;
+  padding: 9px;
+  color: #f0f8ff;
+}
+
+* body main .skills .skill #sql {
+  width: 50%;
   height: 100%;
   background-color: #0088ff;
   text-align: right;
@@ -245,6 +304,28 @@ nav ul .links a img {
 * body main .portfolio video {
   width: 100%;
   z-index: -1;
+}
+
+* body main .links h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+* body main .links ul li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+* body main .links ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #0088ff;
+}
+
+* body main .links ul li a img {
+  width: 35px;
+  height: auto;
+  margin-right: 20px;
 }
 
 * body main .contact {
@@ -321,6 +402,7 @@ nav ul .links a img {
   caret-color: #00000080;
   overflow-y: scroll;
   resize: none;
+  overflow: auto;
 }
 
 * body main .contact form textarea::-webkit-input-placeholder {
@@ -354,18 +436,141 @@ nav ul .links a img {
   right: 0;
   background-color: #0088ff;
   color: #f0f8ff;
+  cursor: pointer;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 636px) {
   * body {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 50px auto;
-        grid-template-columns: 50px auto;
-        grid-template-areas: "aside" "main";
+    -ms-grid-columns: 80vw;
+        grid-template-columns: 80vw;
+        grid-template-areas: "main";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  * body nav {
+    display: none;
   }
   * body aside {
     display: none;
+  }
+  * body main {
+    margin: 0 auto;
+    padding: 100px 30px 50px;
+    row-gap: 150px;
+  }
+  * body main .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+  }
+  * body main .about img {
+    width: 250px;
+    margin: 0;
+    border-radius: 5px;
+  }
+  * body main .about .hello {
+    padding: 0;
+    margin: auto 0 0px;
+  }
+  * body main .about .hello h1 {
+    font-size: 32px;
+  }
+  * body main .about .hello p {
+    font-size: 20px;
+  }
+  * body main .about .hello #download {
+    font-size: 24px;
+    margin-top: 25px;
+  }
+  * body main .skills h2 {
+    font-size: 30px;
+  }
+  * body main .skills label {
+    font-size: 20px;
+  }
+  * body main .skills .skill {
+    height: 50px;
+    margin: 10px 0 20px;
+  }
+  * body main .portfolio h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  * body main .portfolio p {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  * body main .portfolio h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  * body main .contact {
+    width: 100%;
+  }
+  * body main .contact h2 {
+    font-size: 30px;
+  }
+  * body main .contact p {
+    font-size: 20px;
+  }
+  * body main .contact form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    row-gap: 15px;
+    -webkit-column-gap: 2.4%;
+            column-gap: 2.4%;
+  }
+  * body main .contact form input {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    height: 50px;
+    font-size: 20px;
+  }
+  * body main .contact form #name {
+    width: 48.8%;
+  }
+  * body main .contact form #email {
+    width: 48.8%;
+  }
+  * body main .contact form #subject {
+    width: 100%;
+  }
+  * body main .contact form textarea {
+    width: 100%;
+    font-size: 20px;
+  }
+  * body main .contact form #send {
+    width: 100%;
+  }
+  * body main .links a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  * body main {
+    margin: 0 auto;
+    padding: 100px 100px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  * body main {
+    margin: 0 auto;
+    padding: 100px 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

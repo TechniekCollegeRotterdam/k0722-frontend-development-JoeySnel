@@ -1,12 +1,27 @@
-const x = document.getElementById("navList");
-const y = document.getElementById("body");
+let clip = document.getElementById('my-video');
 
-function myFunction() {
-    if (x.style.display === "flex") {
-        x.style.display = "none"
-        y.style.overflow = "visible"
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        // document.body.style.backgroundColor = "yellow";
+        clip.controls = true;
+
     } else {
-        x.style.display = "flex"
-        y.style.overflow = "hidden"
+        // document.body.style.backgroundColor = "pink";
+        clip.controls = false;
+        clip.addEventListener("mouseover", function (e) {
+            clip.play();
+        })
+
+        clip.addEventListener("mouseout", function (e) {
+            clip.pause();
+        })
+
+        clip.addEventListener('ended', function (e) {
+            clip.currentTime = 0;
+        })
     }
 }
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
