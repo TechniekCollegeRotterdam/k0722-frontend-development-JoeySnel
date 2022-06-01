@@ -17,7 +17,7 @@
             display: flex;
             flex-direction: column;
             row-gap: 200px;
-            padding: 80px 15px 15px;
+            padding: 10%;
             background-color: $background;
 
             .about {
@@ -250,7 +250,7 @@
         }
     }
 
-    @media only screen and (min-width: 636px) {
+    @media only screen and (min-width: 768px) {
 
         body {
 
@@ -269,8 +269,8 @@
             }
 
             main {
+                width: 100%;
                 margin: 0 auto;
-                padding: 100px 30px 50px;
                 row-gap: 150px;
 
                 .about {
@@ -338,6 +338,23 @@
                     }
                 }
 
+                .links {
+                    h2 {
+                        font-size: 30px;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                font-size: 22px;
+                                img {
+                                    width: 48px;
+                                }
+                            }
+                        }
+                    }
+                }
+
                 .contact {
                     width: 100%;
 
@@ -383,32 +400,24 @@
                         }
                     }
                 }
-
-                .links {
-                    a {
-                        font-size: 20px;
-                    }
-                }
-
-
             }
         }
     }
 
-    @media only screen and (min-width: 769px) {
-        body {
-            main {
-                margin: 0 auto;
-                padding: 100px 100px;
-            }
-        }
-    }
+    // @media only screen and (min-width: 769px) {
+    //     body {
+    //         main {
+    //             // margin: 0 auto;
+    //             // padding: 0;
+    //         }
+    //     }
+    // }
 
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (min-width: 1024px) {
         body {
             main {
-                margin: 0 auto;
-                padding: 100px 200px;
+                // margin: 0 auto;
+                padding: 15%;
             }
         }
     }

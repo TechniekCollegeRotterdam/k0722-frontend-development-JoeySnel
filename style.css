@@ -180,7 +180,7 @@ aside ul li a img {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 200px;
-  padding: 80px 15px 15px;
+  padding: 10%;
   background-color: #f0f8ff;
 }
 
@@ -439,7 +439,7 @@ aside ul li a img {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 636px) {
+@media only screen and (min-width: 768px) {
   * body {
     display: -ms-grid;
     display: grid;
@@ -457,8 +457,8 @@ aside ul li a img {
     display: none;
   }
   * body main {
+    width: 100%;
     margin: 0 auto;
-    padding: 100px 30px 50px;
     row-gap: 150px;
   }
   * body main .about {
@@ -513,6 +513,15 @@ aside ul li a img {
     margin-bottom: 10px;
     font-size: 20px;
   }
+  * body main .links h2 {
+    font-size: 30px;
+  }
+  * body main .links ul li a {
+    font-size: 22px;
+  }
+  * body main .links ul li a img {
+    width: 48px;
+  }
   * body main .contact {
     width: 100%;
   }
@@ -555,22 +564,11 @@ aside ul li a img {
   * body main .contact form #send {
     width: 100%;
   }
-  * body main .links a {
-    font-size: 20px;
-  }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
   * body main {
-    margin: 0 auto;
-    padding: 100px 100px;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  * body main {
-    margin: 0 auto;
-    padding: 100px 200px;
+    padding: 15%;
   }
 }
 /*# sourceMappingURL=style.css.map */
