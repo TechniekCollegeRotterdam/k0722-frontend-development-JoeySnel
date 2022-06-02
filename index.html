@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="follow, index">
-    <meta name="description" content="I'm Joey Snel, a Dutch software developer student from the Netherlands.">
+    <meta name="description"
+        content="Ik ben Joey Snel, student software development aan het Techniek College Rotterdam.">
     <link rel="icon" href="img/svg/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="canonical" href="https://www.joeysnel.nl/">
     <title>Joey Snel | Portfolio</title>
@@ -21,7 +22,7 @@
         <section class="about">
             <img src="img/IMG_7302.jpeg" alt="Joey Snel">
             <div class="hello">
-                <h1>Hallo, ik ben Joey</h1>
+                <h1>Hoi, ik ben Joey</h1>
                 <p>
                     Gedreven software developer in opleiding.
                 </p>
@@ -36,27 +37,27 @@
             <h2>Skills</h2>
             <label for="html">HTML</label>
             <div class="skill">
-                <div id="html">90%</div>
+                <div id="html"></div>
             </div>
 
             <label for="css">CSS</label>
             <div class="skill">
-                <div id="css">80%</div>
+                <div id="css"></div>
             </div>
 
             <label for="js">Javascript</label>
             <div class="skill">
-                <div id="js">70%</div>
+                <div id="js"></div>
             </div>
 
             <label for="php">PHP</label>
             <div class="skill">
-                <div id="php">50%</div>
+                <div id="php"></div>
             </div>
 
             <label for="sql">SQL</label>
             <div class="skill">
-                <div id="sql">50%</div>
+                <div id="sql"></div>
             </div>
         </section>
         <section class="portfolio">
@@ -70,15 +71,15 @@
             <h2>Links</h2>
             <ul>
                 <li>
-                    <a href="https://www.linkedin.com/in/joey-snel-5600b3236/"><img src="img/svg/linkedin-brands.svg"
+                    <a href="https://www.linkedin.com/in/joey-snel-5600b3236/"><img id="linkedin" src="img/svg/linkedin-brands.svg"
                             alt="Mijn LinkedIn">https://www.linkedin.com/in/joey-snel-5600b3236/</a>
                 </li>
                 <li>
-                    <a href="https://github.com/JoeySnel"><img src="img/svg/github-brands.svg"
+                    <a href="https://github.com/JoeySnel"><img id="github" src="img/svg/github-brands.svg"
                             alt="Mijn GitHub">https://github.com/JoeySnel</a>
                 </li>
                 <li>
-                    <a href="mailto:joey_snel@outlook.com, 9016797@student.zadkine.nl"><img
+                    <a href="mailto:joey_snel@outlook.com, 9016797@student.zadkine.nl"><img id="paperplane"
                             src="img/svg/paper-plane-solid.svg" alt="Mijn Mail">joey_snel@outlook.com</a>
                 </li>
             </ul>
@@ -89,13 +90,23 @@
                 Voor de periode September 2022 - Januari 2023 ben ik op zoek naar een geschikte stageplek waarmee ik
                 mij
                 kan verdiepen in programmeren; front-end zowel als back-end.<br>
-                Is dit mogelijk bij uw bedrijf, stuur mij dan snel een bericht!</p>
-            <form action="">
-                <input type="text" name="name" id="name" placeholder="Naam" autocomplete="off" required>
-                <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
-                <input type="text" name="subject" id="subject" placeholder="Onderwerp" autocomplete="off" required>
-                <textarea name="message" id="message" placeholder="Bericht" autocomplete="off" required></textarea>
-                <input type="submit" name="send" id="send" value="Verzenden">
+                Is dit mogelijk bij uw bedrijf, stuur mij dan snel een bericht!<br>
+                Als je me wat anders wilt vertellen of vragen mag dat natuurlijk ook.</p>
+            <form action="https://formsubmit.co/706849159b7c8e9906ceb7ccc3ed54f8" method="POST">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" id="honey">
+
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- Redirect to confirmation page-->
+                <input type="hidden" name="_next" value="https://joeysnel.nl/success.html">
+
+                <input type="text" name="Naam" id="name" placeholder="Naam" autocomplete="off" required>
+                <input type="email" name="E-mail" id="email" placeholder="E-mail" autocomplete="off" required>
+                <input type="text" name="Onderwerp" id="subject" placeholder="Onderwerp" autocomplete="off" required>
+                <textarea name="Bericht" id="message" placeholder="Bericht" autocomplete="off" required></textarea>
+                <input type="submit" id="send" value="Verzenden">
             </form>
         </section>
     </main>

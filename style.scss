@@ -11,20 +11,21 @@
 
     body {
         overflow: visible;
-        background-color: white;
+        background-color: $body;
 
         main {
             display: flex;
             flex-direction: column;
             row-gap: 200px;
             padding: 10%;
-            background-color: $background;
+            background-color: $main;
 
             .about {
                 img {
                     display: block;
                     width: 90%;
                     margin: 0 auto;
+                    border-radius: 3px;
                 }
 
                 .hello {
@@ -49,12 +50,16 @@
                         display: block;
                         background-color: $accent;
                         border: none;
-                        border-radius: 20px;
+                        border-radius: 3px;
                         color: white;
                         font-size: 18px;
                         padding: 10px 20px;
                         margin-top: 10px;
                         cursor: pointer;
+                    }
+
+                    #download:hover {
+                        background-color: $altAccent;
                     }
                 }
             }
@@ -74,55 +79,70 @@
                 .skill {
                     width: 100%;
                     height: 40px;
-                    background-color: rgba(0, 0, 0, 0.15);
+                    background-color: $input;
                     border-radius: 3px;
                     overflow: hidden;
                     margin: 5px 0;
 
                     #html {
-                        width: 90%;
+                        width: 85%;
                         height: 100%;
                         background-color: $accent;
                         text-align: right;
                         padding: 9px;
-                        color: $background;
                     }
+
+                    // #html:hover {
+                    //     background-color: $altAccent;
+                    // }
 
                     #css {
-                        width: 80%;
+                        width: 75%;
                         height: 100%;
                         background-color: $accent;
                         text-align: right;
                         padding: 9px;
-                        color: $background;
                     }
 
-                    #php {
-                        width: 50%;
-                        height: 100%;
-                        background-color: $accent;
-                        text-align: right;
-                        padding: 9px;
-                        color: $background;
-                    }
+                    // #css:hover {
+                    //     background-color: $altAccent;
+                    // }
 
                     #js {
-                        width: 70%;
+                        width: 45%;
                         height: 100%;
                         background-color: $accent;
                         text-align: right;
                         padding: 9px;
-                        color: $background;
                     }
 
-                    #sql {
-                        width: 50%;
+                    // #js:hover {
+                    //     background-color: $altAccent;
+                    // }
+
+                    #php {
+                        width: 35%;
                         height: 100%;
                         background-color: $accent;
                         text-align: right;
                         padding: 9px;
-                        color: $background;
                     }
+
+                    // #php:hover {
+                    //     background-color: $altAccent;
+                    // }
+
+                    #sql {
+                        width: 35%;
+                        height: 100%;
+                        background-color: $accent;
+                        text-align: right;
+                        padding: 9px;
+                    }
+
+                    // #sql:hover {
+                    //     background-color: $altAccent;
+                    // }
                 }
             }
 
@@ -143,6 +163,7 @@
                 video {
                     width: 100%;
                     z-index: -1;
+                    border-radius: 3px;
                 }
             }
 
@@ -169,12 +190,21 @@
                                 margin-right: 20px;
                             }
                         }
+
+                        a:hover {
+                            text-decoration: underline;
+                            color: $altAccent;
+                        }
                     }
                 }
             }
 
             .contact {
                 width: 100%;
+
+                #honey {
+                    display: none;
+                }
 
                 h2 {
                     font-size: 24px;
@@ -195,10 +225,17 @@
                         height: 50px;
                         border: none;
                         border-radius: 2px;
-                        background-color: rgba(0, 0, 0, 0.15);
+                        background-color: $input;
                         font-size: 18px;
                         padding: 0 10px;
                         caret-color: $font1;
+                    }
+
+                    input:-webkit-autofill,
+                    input:-webkit-autofill:hover,
+                    input:-webkit-autofill:focus,
+                    input:-webkit-autofill:active {
+                        box-shadow: 0 0 0 30px $input inset !important;
                     }
 
                     input::placeholder {
@@ -208,12 +245,36 @@
 
                     input:focus {
                         outline: none;
-                        border-bottom: solid 4px $accent;
+                        // border-bottom: solid 4px $accent;
+                    }
+
+                    input:hover {
+                        outline: none;
+                    }
+
+                    input:focus::placeholder {
+                        color: transparent;
+                    }
+
+                    #email {
+                        text-transform: lowercase;
+                    }
+
+                    #email::placeholder {
+                        text-transform: none;
+                    }
+
+                    #email:focus::placeholder {
+                        text-transform: none;
+                    }
+
+                    #email:focus {
+                        text-transform: lowercase;
                     }
 
                     textarea {
                         box-sizing: border-box;
-                        background-color: rgba(0, 0, 0, 0.15);
+                        background-color: $input;
                         border: none;
                         border-radius: 2px;
                         min-height: 200px;
@@ -234,7 +295,10 @@
 
                     textarea:focus {
                         outline: none;
-                        border-bottom: solid 4px $accent;
+                    }
+
+                    textarea:focus::placeholder {
+                        color: transparent;
                     }
 
                     #send {
@@ -242,9 +306,36 @@
                         margin: 5px auto 0;
                         right: 0;
                         background-color: $accent;
-                        color: $background;
+                        color: $main;
                         cursor: pointer;
                     }
+
+                    #send:hover {
+                        background-color: $altAccent;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        .success {
+            section {
+                h2 {
+                    font-size: 24px;
+                    padding: 0 0 20px 0;
+                }
+
+                p {
+                    padding: 0 0 10px 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $accent;
+                }
+
+                a:hover {
+                    text-decoration: underline;
                 }
             }
         }
@@ -262,7 +353,6 @@
             grid-template-columns: 80vw;
             grid-template-areas: "main";
             justify-content: center;
-            // align-items: center;
 
             aside {
                 display: none;
@@ -270,6 +360,7 @@
 
             main {
                 width: 100%;
+                padding: 10%;
                 margin: 0 auto;
                 row-gap: 150px;
 
@@ -282,8 +373,6 @@
                     img {
                         width: 250px;
                         margin: 0;
-                        border-radius: 5px;
-
                     }
 
                     .hello {
@@ -347,8 +436,9 @@
                         li {
                             a {
                                 font-size: 22px;
+
                                 img {
-                                    width: 48px;
+                                    width: 40px;
                                 }
                             }
                         }
@@ -401,23 +491,262 @@
                     }
                 }
             }
+
+            .success {
+                padding: 5% 10% 10% 10%;
+                margin: 10% auto;
+
+                section {
+                    h2 {
+                        font-size: 30px;
+                        padding: 0 0 20px 0;
+                    }
+
+                    p {
+                        padding: 0 0 10px 0;
+                        font-size: 20px;
+                    }
+
+                    a {
+                        right: 0;
+                        font-size: 20px;
+                    }
+                }
+            }
         }
     }
-
-    // @media only screen and (min-width: 769px) {
-    //     body {
-    //         main {
-    //             // margin: 0 auto;
-    //             // padding: 0;
-    //         }
-    //     }
-    // }
 
     @media only screen and (min-width: 1024px) {
         body {
             main {
-                // margin: 0 auto;
-                padding: 15%;
+                padding: 10%;
+                width: 90%;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+        body {
+            main {
+                padding: 10%;
+                width: 80%;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 2560px) {
+        body {
+            main {
+                padding: 10%;
+                width: 60%;
+            }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        body {
+            background-color: $darkBody;
+
+            main {
+                background-color: $darkMain;
+
+                .about {
+                    .hello {
+                        h1 {
+                            color: white;
+                        }
+
+                        p {
+                            color: $darkFont1;
+                        }
+                    }
+
+                    a {
+
+                        #download {
+                            background-color: $darkAccent;
+                            color: $darkMain;
+                        }
+
+                        #download:hover {
+                            background-color: $darkAltAccent;
+                        }
+                    }
+                }
+
+                .skills {
+
+                    h2 {
+
+                        color: $darkFont1;
+                    }
+
+                    label {
+                        color: $darkFont1;
+                    }
+
+                    .skill {
+                        background-color: $darkInput;
+
+                        #html {
+                            background-color: $darkAccent;
+                            color: $darkMain;
+                        }
+
+                        // #html:hover {
+                        //     background-color: $darkAltAccent;
+                        // }
+
+                        #css {
+                            background-color: $darkAccent;
+                            color: $darkMain;
+                        }
+
+                        // #css:hover {
+                        //     background-color: $darkAltAccent;
+                        // }
+
+                        #js {
+                            background-color: $darkAccent;
+                            color: $darkMain;
+                        }
+
+                        // #js:hover {
+                        //     background-color: $darkAltAccent;
+                        // }
+
+                        #php {
+                            background-color: $darkAccent;
+                            color: $darkMain;
+                        }
+
+                        // #php:hover {
+                        //     background-color: $darkAltAccent;
+                        // }
+
+                        #sql {
+                            background-color: $darkAccent;
+                            color: $darkMain;
+                        }
+
+                        // #sql:hover {
+                        //     background-color: $darkAltAccent;
+                        // }
+                    }
+                }
+
+                .portfolio {
+                    h2 {
+                        color: $darkFont1;
+                    }
+
+                    p {
+                        color: $darkFont1;
+                    }
+
+                    h3 {
+                        color: $darkFont1;
+                    }
+                }
+
+                .links {
+
+                    h2 {
+                        color: $darkFont1;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                color: $darkAccent;
+
+                                #linkedin {
+                                    content: url(img/svg/linkedin-brands-grey.svg);
+                                }
+                                
+                                #github {
+                                    content: url(img/svg/github-brands-grey.svg);
+                                }
+
+                                #paperplane {
+                                    content: url(img/svg/paper-plane-solid-grey.svg);
+                                }
+
+
+                            }
+
+                            a:hover {
+                                color: $darkAltAccent;
+                            }
+                        }
+                    }
+                }
+
+                .contact {
+                    h2 {
+                        color: $darkFont1;
+                    }
+
+                    p {
+                        color: $darkFont1;
+                    }
+
+                    form {
+
+                        input {
+                            color: $darkFont1;
+                            background-color: $darkInput;
+                            caret-color: $darkFont1;
+                        }
+
+                        input:-webkit-autofill,
+                        input:-webkit-autofill:hover,
+                        input:-webkit-autofill:focus,
+                        input:-webkit-autofill:active {
+                            box-shadow: 0 0 0 30px $darkInput inset !important;
+                        }
+
+                        input::placeholder {
+                            color: $darkFont1;
+                        }
+
+                        textarea {
+                            background-color: $darkInput;
+                            caret-color: $darkFont1;
+                            color: $darkFont1;
+                        }
+
+                        textarea::placeholder {
+                            color: $darkFont1;
+                        }
+
+                        #send {
+                            background-color: $darkAccent;
+                            color: $darkMain;
+                        }
+
+                        #send:hover {
+                            background-color: $darkAltAccent;
+                        }
+                    }
+                }
+            }
+
+            .success {
+                section {
+                    h2 {
+                        color: $darkFont1;
+                    }
+
+                    p {
+                        color: $darkFont1;
+                    }
+
+                    a {
+                        color: $darkAccent;
+                    }
+                }
             }
         }
     }

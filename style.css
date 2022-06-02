@@ -168,7 +168,7 @@ aside ul li a img {
 
 * body {
   overflow: visible;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 * body main {
@@ -188,6 +188,7 @@ aside ul li a img {
   display: block;
   width: 90%;
   margin: 0 auto;
+  border-radius: 3px;
 }
 
 * body main .about .hello {
@@ -213,12 +214,16 @@ aside ul li a img {
   display: block;
   background-color: #0088ff;
   border: none;
-  border-radius: 20px;
+  border-radius: 3px;
   color: white;
   font-size: 18px;
   padding: 10px 20px;
   margin-top: 10px;
   cursor: pointer;
+}
+
+* body main .about a #download:hover {
+  background-color: #0177de;
 }
 
 * body main .skills {
@@ -237,55 +242,50 @@ aside ul li a img {
 * body main .skills .skill {
   width: 100%;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: #d4dbe2;
   border-radius: 3px;
   overflow: hidden;
   margin: 5px 0;
 }
 
 * body main .skills .skill #html {
-  width: 90%;
+  width: 85%;
   height: 100%;
   background-color: #0088ff;
   text-align: right;
   padding: 9px;
-  color: #f0f8ff;
 }
 
 * body main .skills .skill #css {
-  width: 80%;
+  width: 75%;
   height: 100%;
   background-color: #0088ff;
   text-align: right;
   padding: 9px;
-  color: #f0f8ff;
-}
-
-* body main .skills .skill #php {
-  width: 50%;
-  height: 100%;
-  background-color: #0088ff;
-  text-align: right;
-  padding: 9px;
-  color: #f0f8ff;
 }
 
 * body main .skills .skill #js {
-  width: 70%;
+  width: 45%;
   height: 100%;
   background-color: #0088ff;
   text-align: right;
   padding: 9px;
-  color: #f0f8ff;
+}
+
+* body main .skills .skill #php {
+  width: 35%;
+  height: 100%;
+  background-color: #0088ff;
+  text-align: right;
+  padding: 9px;
 }
 
 * body main .skills .skill #sql {
-  width: 50%;
+  width: 35%;
   height: 100%;
   background-color: #0088ff;
   text-align: right;
   padding: 9px;
-  color: #f0f8ff;
 }
 
 * body main .portfolio h2 {
@@ -304,6 +304,7 @@ aside ul li a img {
 * body main .portfolio video {
   width: 100%;
   z-index: -1;
+  border-radius: 3px;
 }
 
 * body main .links h2 {
@@ -328,8 +329,17 @@ aside ul li a img {
   margin-right: 20px;
 }
 
+* body main .links ul li a:hover {
+  text-decoration: underline;
+  color: #0177de;
+}
+
 * body main .contact {
   width: 100%;
+}
+
+* body main .contact #honey {
+  display: none;
 }
 
 * body main .contact h2 {
@@ -357,10 +367,18 @@ aside ul li a img {
   height: 50px;
   border: none;
   border-radius: 2px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: #d4dbe2;
   font-size: 18px;
   padding: 0 10px;
   caret-color: #00000080;
+}
+
+* body main .contact form input:-webkit-autofill,
+* body main .contact form input:-webkit-autofill:hover,
+* body main .contact form input:-webkit-autofill:focus,
+* body main .contact form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #d4dbe2 inset !important;
+          box-shadow: 0 0 0 30px #d4dbe2 inset !important;
 }
 
 * body main .contact form input::-webkit-input-placeholder {
@@ -385,13 +403,72 @@ aside ul li a img {
 
 * body main .contact form input:focus {
   outline: none;
-  border-bottom: solid 4px #0088ff;
+}
+
+* body main .contact form input:hover {
+  outline: none;
+}
+
+* body main .contact form input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+* body main .contact form input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+* body main .contact form input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+* body main .contact form input:focus::placeholder {
+  color: transparent;
+}
+
+* body main .contact form #email {
+  text-transform: lowercase;
+}
+
+* body main .contact form #email::-webkit-input-placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email:-ms-input-placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email::-ms-input-placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email::placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email:focus::-webkit-input-placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email:focus:-ms-input-placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email:focus::-ms-input-placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email:focus::placeholder {
+  text-transform: none;
+}
+
+* body main .contact form #email:focus {
+  text-transform: lowercase;
 }
 
 * body main .contact form textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: #d4dbe2;
   border: none;
   border-radius: 2px;
   min-height: 200px;
@@ -427,7 +504,22 @@ aside ul li a img {
 
 * body main .contact form textarea:focus {
   outline: none;
-  border-bottom: solid 4px #0088ff;
+}
+
+* body main .contact form textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+* body main .contact form textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+* body main .contact form textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+* body main .contact form textarea:focus::placeholder {
+  color: transparent;
 }
 
 * body main .contact form #send {
@@ -437,6 +529,29 @@ aside ul li a img {
   background-color: #0088ff;
   color: #f0f8ff;
   cursor: pointer;
+}
+
+* body main .contact form #send:hover {
+  background-color: #0177de;
+  border-bottom: none;
+}
+
+* body .success section h2 {
+  font-size: 24px;
+  padding: 0 0 20px 0;
+}
+
+* body .success section p {
+  padding: 0 0 10px 0;
+}
+
+* body .success section a {
+  text-decoration: none;
+  color: #0088ff;
+}
+
+* body .success section a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 768px) {
@@ -458,6 +573,7 @@ aside ul li a img {
   }
   * body main {
     width: 100%;
+    padding: 10%;
     margin: 0 auto;
     row-gap: 150px;
   }
@@ -475,7 +591,6 @@ aside ul li a img {
   * body main .about img {
     width: 250px;
     margin: 0;
-    border-radius: 5px;
   }
   * body main .about .hello {
     padding: 0;
@@ -520,7 +635,7 @@ aside ul li a img {
     font-size: 22px;
   }
   * body main .links ul li a img {
-    width: 48px;
+    width: 40px;
   }
   * body main .contact {
     width: 100%;
@@ -564,11 +679,183 @@ aside ul li a img {
   * body main .contact form #send {
     width: 100%;
   }
+  * body .success {
+    padding: 5% 10% 10% 10%;
+    margin: 10% auto;
+  }
+  * body .success section h2 {
+    font-size: 30px;
+    padding: 0 0 20px 0;
+  }
+  * body .success section p {
+    padding: 0 0 10px 0;
+    font-size: 20px;
+  }
+  * body .success section a {
+    right: 0;
+    font-size: 20px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   * body main {
-    padding: 15%;
+    padding: 10%;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  * body main {
+    padding: 10%;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  * body main {
+    padding: 10%;
+    width: 60%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  * body {
+    background-color: #000000;
+  }
+  * body main {
+    background-color: #080808;
+  }
+  * body main .about .hello h1 {
+    color: white;
+  }
+  * body main .about .hello p {
+    color: #eaeaea;
+  }
+  * body main .about a #download {
+    background-color: #0177de;
+    color: #080808;
+  }
+  * body main .about a #download:hover {
+    background-color: #309eff;
+  }
+  * body main .skills h2 {
+    color: #eaeaea;
+  }
+  * body main .skills label {
+    color: #eaeaea;
+  }
+  * body main .skills .skill {
+    background-color: #232323;
+  }
+  * body main .skills .skill #html {
+    background-color: #0177de;
+    color: #080808;
+  }
+  * body main .skills .skill #css {
+    background-color: #0177de;
+    color: #080808;
+  }
+  * body main .skills .skill #js {
+    background-color: #0177de;
+    color: #080808;
+  }
+  * body main .skills .skill #php {
+    background-color: #0177de;
+    color: #080808;
+  }
+  * body main .skills .skill #sql {
+    background-color: #0177de;
+    color: #080808;
+  }
+  * body main .portfolio h2 {
+    color: #eaeaea;
+  }
+  * body main .portfolio p {
+    color: #eaeaea;
+  }
+  * body main .portfolio h3 {
+    color: #eaeaea;
+  }
+  * body main .links h2 {
+    color: #eaeaea;
+  }
+  * body main .links ul li a {
+    color: #0177de;
+  }
+  * body main .links ul li a #linkedin {
+    content: url(img/svg/linkedin-brands-grey.svg);
+  }
+  * body main .links ul li a #github {
+    content: url(img/svg/github-brands-grey.svg);
+  }
+  * body main .links ul li a #paperplane {
+    content: url(img/svg/paper-plane-solid-grey.svg);
+  }
+  * body main .links ul li a:hover {
+    color: #309eff;
+  }
+  * body main .contact h2 {
+    color: #eaeaea;
+  }
+  * body main .contact p {
+    color: #eaeaea;
+  }
+  * body main .contact form input {
+    color: #eaeaea;
+    background-color: #232323;
+    caret-color: #eaeaea;
+  }
+  * body main .contact form input:-webkit-autofill,
+  * body main .contact form input:-webkit-autofill:hover,
+  * body main .contact form input:-webkit-autofill:focus,
+  * body main .contact form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #232323 inset !important;
+            box-shadow: 0 0 0 30px #232323 inset !important;
+  }
+  * body main .contact form input::-webkit-input-placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form input:-ms-input-placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form input::-ms-input-placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form input::placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form textarea {
+    background-color: #232323;
+    caret-color: #eaeaea;
+    color: #eaeaea;
+  }
+  * body main .contact form textarea::-webkit-input-placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form textarea:-ms-input-placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form textarea::-ms-input-placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form textarea::placeholder {
+    color: #eaeaea;
+  }
+  * body main .contact form #send {
+    background-color: #0177de;
+    color: #080808;
+  }
+  * body main .contact form #send:hover {
+    background-color: #309eff;
+  }
+  * body .success section h2 {
+    color: #eaeaea;
+  }
+  * body .success section p {
+    color: #eaeaea;
+  }
+  * body .success section a {
+    color: #0177de;
   }
 }
 /*# sourceMappingURL=style.css.map */
