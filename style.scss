@@ -39,7 +39,7 @@
                         font-size: 18px;
                         margin-top: 10px;
                         font-style: italic;
-                        color: $font1;
+                        color: $font;
                     }
                 }
 
@@ -51,7 +51,7 @@
                         background-color: $accent;
                         border: none;
                         border-radius: 3px;
-                        color: white;
+                        color: $font;
                         font-size: 18px;
                         padding: 10px 20px;
                         margin-top: 10px;
@@ -59,7 +59,7 @@
                     }
 
                     #download:hover {
-                        background-color: $altAccent;
+                        background-color: $secondAccent;
                     }
                 }
             }
@@ -76,73 +76,51 @@
                     font-size: 18px;
                 }
 
-                .skill {
+                .progress-bar-container {
                     width: 100%;
                     height: 40px;
                     background-color: $input;
                     border-radius: 3px;
                     overflow: hidden;
-                    margin: 5px 0;
+                    margin: 10px 0 20px 0;
+                    position: relative;
+
+                    .progress-bar-indicator {
+                        height: 100%;
+                        -webkit-mask: linear-gradient(#fff 0 0);
+                        mask: linear-gradient(#fff 0 0);
+                    }
+
+                    .progress-bar-indicator::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-image: linear-gradient(to right, $accent, blue);
+                    }
 
                     #html {
                         width: 85%;
-                        height: 100%;
-                        background-color: $accent;
-                        text-align: right;
-                        padding: 9px;
                     }
-
-                    // #html:hover {
-                    //     background-color: $altAccent;
-                    // }
 
                     #css {
                         width: 75%;
-                        height: 100%;
-                        background-color: $accent;
-                        text-align: right;
-                        padding: 9px;
                     }
-
-                    // #css:hover {
-                    //     background-color: $altAccent;
-                    // }
 
                     #js {
                         width: 45%;
-                        height: 100%;
-                        background-color: $accent;
-                        text-align: right;
-                        padding: 9px;
                     }
-
-                    // #js:hover {
-                    //     background-color: $altAccent;
-                    // }
 
                     #php {
                         width: 35%;
-                        height: 100%;
-                        background-color: $accent;
-                        text-align: right;
-                        padding: 9px;
                     }
-
-                    // #php:hover {
-                    //     background-color: $altAccent;
-                    // }
 
                     #sql {
                         width: 35%;
-                        height: 100%;
-                        background-color: $accent;
-                        text-align: right;
-                        padding: 9px;
                     }
 
-                    // #sql:hover {
-                    //     background-color: $altAccent;
-                    // }
                 }
             }
 
@@ -193,7 +171,7 @@
 
                         a:hover {
                             text-decoration: underline;
-                            color: $altAccent;
+                            color: $secondAccent;
                         }
                     }
                 }
@@ -228,7 +206,7 @@
                         background-color: $input;
                         font-size: 18px;
                         padding: 0 10px;
-                        caret-color: $font1;
+                        caret-color: $font;
                     }
 
                     input:-webkit-autofill,
@@ -240,7 +218,7 @@
 
                     input::placeholder {
                         font-style: italic;
-                        color: $font1;
+                        color: $font;
                     }
 
                     input:focus {
@@ -282,7 +260,7 @@
                         resize: vertical;
                         font-size: 18px;
                         padding: 10px;
-                        caret-color: $font1;
+                        caret-color: $font;
                         overflow-y: scroll;
                         resize: none;
                         overflow: auto;
@@ -290,7 +268,7 @@
 
                     textarea::placeholder {
                         font-style: italic;
-                        color: $font1;
+                        color: $font;
                     }
 
                     textarea:focus {
@@ -311,7 +289,7 @@
                     }
 
                     #send:hover {
-                        background-color: $altAccent;
+                        background-color: $secondAccent;
                         border-bottom: none;
                     }
                 }
@@ -336,7 +314,7 @@
 
                 a:hover {
                     text-decoration: underline;
-                    color: $altAccent;
+                    color: $secondAccent;
                 }
             }
         }
@@ -494,7 +472,7 @@
             }
 
             .success {
-                padding: 5% 10% 10% 10%;
+                padding: 10%;
                 margin: 10% auto;
 
                 section {
@@ -547,31 +525,31 @@
     @media (prefers-color-scheme: dark) {
 
         body {
-            background-color: $darkBody;
+            background-color: $body2;
 
             main {
-                background-color: $darkMain;
+                background-image: linear-gradient(to bottom right, $body2, $main2, $body2);
 
                 .about {
                     .hello {
                         h1 {
-                            color: white;
+                            color: $font2;
                         }
 
                         p {
-                            color: $darkFont1;
+                            color: $font2;
                         }
                     }
 
                     a {
 
                         #download {
-                            background-color: $darkAccent;
-                            color: $darkMain;
+                            background-color: $accent2;
+                            color: $main2;
                         }
 
                         #download:hover {
-                            background-color: $darkAltAccent;
+                            background-color: $secondAccent2;
                         }
                     }
                 }
@@ -580,105 +558,64 @@
 
                     h2 {
 
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     label {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
-                    .skill {
-                        background-color: $darkInput;
+                    .progress-bar-container {
+                        background-color: $input2;
 
-                        #html {
-                            background-color: $darkAccent;
-                            color: $darkMain;
+                        .progress-bar-indicator::before {
+                            background-image: linear-gradient(to right, #463fb7, #6644d1, #7d43b2);
                         }
-
-                        // #html:hover {
-                        //     background-color: $darkAltAccent;
-                        // }
-
-                        #css {
-                            background-color: $darkAccent;
-                            color: $darkMain;
-                        }
-
-                        // #css:hover {
-                        //     background-color: $darkAltAccent;
-                        // }
-
-                        #js {
-                            background-color: $darkAccent;
-                            color: $darkMain;
-                        }
-
-                        // #js:hover {
-                        //     background-color: $darkAltAccent;
-                        // }
-
-                        #php {
-                            background-color: $darkAccent;
-                            color: $darkMain;
-                        }
-
-                        // #php:hover {
-                        //     background-color: $darkAltAccent;
-                        // }
-
-                        #sql {
-                            background-color: $darkAccent;
-                            color: $darkMain;
-                        }
-
-                        // #sql:hover {
-                        //     background-color: $darkAltAccent;
-                        // }
                     }
                 }
 
                 .portfolio {
                     h2 {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     p {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     h3 {
-                        color: $darkFont1;
+                        color: $font2;
                     }
                 }
 
                 .links {
 
                     h2 {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     ul {
                         li {
                             a {
-                                color: $darkAccent;
+                                color: $hyperlink2;
 
                                 #linkedin {
-                                    content: url(img/svg/linkedin-brands-grey.svg);
+                                    content: url(img/svg/linkedin-darkmode.svg);
                                 }
-                                
+
                                 #github {
-                                    content: url(img/svg/github-brands-grey.svg);
+                                    content: url(img/svg/github-darkmode.svg);
                                 }
 
                                 #paperplane {
-                                    content: url(img/svg/paper-plane-solid-grey.svg);
+                                    content: url(img/svg/paper-plane-darkmode.svg);
                                 }
 
 
                             }
 
                             a:hover {
-                                color: $darkAltAccent;
+                                color: $secondHyperlink2;
                             }
                         }
                     }
@@ -686,49 +623,49 @@
 
                 .contact {
                     h2 {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     p {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     form {
 
                         input {
-                            color: $darkFont1;
-                            background-color: $darkInput;
-                            caret-color: $darkFont1;
+                            color: $font2;
+                            background-color: $input2;
+                            caret-color: $font2;
                         }
 
                         input:-webkit-autofill,
                         input:-webkit-autofill:hover,
                         input:-webkit-autofill:focus,
                         input:-webkit-autofill:active {
-                            box-shadow: 0 0 0 30px $darkInput inset !important;
+                            box-shadow: 0 0 0 30px $input2 inset !important;
                         }
 
                         input::placeholder {
-                            color: $darkFont1;
+                            color: $font2;
                         }
 
                         textarea {
-                            background-color: $darkInput;
-                            caret-color: $darkFont1;
-                            color: $darkFont1;
+                            background-color: $input2;
+                            caret-color: $font2;
+                            color: $font2;
                         }
 
                         textarea::placeholder {
-                            color: $darkFont1;
+                            color: $font2;
                         }
 
                         #send {
-                            background-color: $darkAccent;
-                            color: $darkMain;
+                            background-color: $accent2;
+                            color: $main2;
                         }
 
                         #send:hover {
-                            background-color: $darkAltAccent;
+                            background-color: $secondAccent2;
                         }
                     }
                 }
@@ -737,19 +674,19 @@
             .success {
                 section {
                     h2 {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     p {
-                        color: $darkFont1;
+                        color: $font2;
                     }
 
                     a {
-                        color: $darkAccent;
+                        color: $hyperlink2;
                     }
 
                     a:hover {
-                        color: $darkAltAccent;
+                        color: $secondHyperlink2;
                     }
                 }
             }

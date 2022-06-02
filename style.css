@@ -215,7 +215,7 @@ aside ul li a img {
   background-color: #0088ff;
   border: none;
   border-radius: 3px;
-  color: white;
+  color: #00000080;
   font-size: 18px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -239,53 +239,53 @@ aside ul li a img {
   font-size: 18px;
 }
 
-* body main .skills .skill {
+* body main .skills .progress-bar-container {
   width: 100%;
   height: 40px;
   background-color: #d4dbe2;
   border-radius: 3px;
   overflow: hidden;
-  margin: 5px 0;
+  margin: 10px 0 20px 0;
+  position: relative;
 }
 
-* body main .skills .skill #html {
+* body main .skills .progress-bar-container .progress-bar-indicator {
+  height: 100%;
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0);
+  mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  mask: linear-gradient(#fff 0 0);
+}
+
+* body main .skills .progress-bar-container .progress-bar-indicator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0088ff), to(blue));
+  background-image: linear-gradient(to right, #0088ff, blue);
+}
+
+* body main .skills .progress-bar-container #html {
   width: 85%;
-  height: 100%;
-  background-color: #0088ff;
-  text-align: right;
-  padding: 9px;
 }
 
-* body main .skills .skill #css {
+* body main .skills .progress-bar-container #css {
   width: 75%;
-  height: 100%;
-  background-color: #0088ff;
-  text-align: right;
-  padding: 9px;
 }
 
-* body main .skills .skill #js {
+* body main .skills .progress-bar-container #js {
   width: 45%;
-  height: 100%;
-  background-color: #0088ff;
-  text-align: right;
-  padding: 9px;
 }
 
-* body main .skills .skill #php {
+* body main .skills .progress-bar-container #php {
   width: 35%;
-  height: 100%;
-  background-color: #0088ff;
-  text-align: right;
-  padding: 9px;
 }
 
-* body main .skills .skill #sql {
+* body main .skills .progress-bar-container #sql {
   width: 35%;
-  height: 100%;
-  background-color: #0088ff;
-  text-align: right;
-  padding: 9px;
 }
 
 * body main .portfolio h2 {
@@ -681,7 +681,7 @@ aside ul li a img {
     width: 100%;
   }
   * body .success {
-    padding: 5% 10% 10% 10%;
+    padding: 10%;
     margin: 10% auto;
   }
   * body .success section h2 {
@@ -721,23 +721,24 @@ aside ul li a img {
 
 @media (prefers-color-scheme: dark) {
   * body {
-    background-color: #000000;
+    background-color: #1a1a30;
   }
   * body main {
-    background-color: #080808;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#1a1a30), color-stop(#181c22), to(#1a1a30));
+    background-image: linear-gradient(to bottom right, #1a1a30, #181c22, #1a1a30);
   }
   * body main .about .hello h1 {
-    color: white;
+    color: #eaeaea;
   }
   * body main .about .hello p {
     color: #eaeaea;
   }
   * body main .about a #download {
-    background-color: #0177de;
-    color: #080808;
+    background-color: #0edb94;
+    color: #181c22;
   }
   * body main .about a #download:hover {
-    background-color: #309eff;
+    background-color: #08f6a2;
   }
   * body main .skills h2 {
     color: #eaeaea;
@@ -745,28 +746,12 @@ aside ul li a img {
   * body main .skills label {
     color: #eaeaea;
   }
-  * body main .skills .skill {
-    background-color: #232323;
+  * body main .skills .progress-bar-container {
+    background-color: #272838;
   }
-  * body main .skills .skill #html {
-    background-color: #0177de;
-    color: #080808;
-  }
-  * body main .skills .skill #css {
-    background-color: #0177de;
-    color: #080808;
-  }
-  * body main .skills .skill #js {
-    background-color: #0177de;
-    color: #080808;
-  }
-  * body main .skills .skill #php {
-    background-color: #0177de;
-    color: #080808;
-  }
-  * body main .skills .skill #sql {
-    background-color: #0177de;
-    color: #080808;
+  * body main .skills .progress-bar-container .progress-bar-indicator::before {
+    background-image: -webkit-gradient(linear, left top, right top, from(#463fb7), color-stop(#6644d1), to(#7d43b2));
+    background-image: linear-gradient(to right, #463fb7, #6644d1, #7d43b2);
   }
   * body main .portfolio h2 {
     color: #eaeaea;
@@ -781,19 +766,19 @@ aside ul li a img {
     color: #eaeaea;
   }
   * body main .links ul li a {
-    color: #0177de;
+    color: #ffd679;
   }
   * body main .links ul li a #linkedin {
-    content: url(img/svg/linkedin-brands-grey.svg);
+    content: url(img/svg/linkedin-darkmode.svg);
   }
   * body main .links ul li a #github {
-    content: url(img/svg/github-brands-grey.svg);
+    content: url(img/svg/github-darkmode.svg);
   }
   * body main .links ul li a #paperplane {
-    content: url(img/svg/paper-plane-solid-grey.svg);
+    content: url(img/svg/paper-plane-darkmode.svg);
   }
   * body main .links ul li a:hover {
-    color: #309eff;
+    color: #ffb300;
   }
   * body main .contact h2 {
     color: #eaeaea;
@@ -803,15 +788,15 @@ aside ul li a img {
   }
   * body main .contact form input {
     color: #eaeaea;
-    background-color: #232323;
+    background-color: #272838;
     caret-color: #eaeaea;
   }
   * body main .contact form input:-webkit-autofill,
   * body main .contact form input:-webkit-autofill:hover,
   * body main .contact form input:-webkit-autofill:focus,
   * body main .contact form input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #232323 inset !important;
-            box-shadow: 0 0 0 30px #232323 inset !important;
+    -webkit-box-shadow: 0 0 0 30px #272838 inset !important;
+            box-shadow: 0 0 0 30px #272838 inset !important;
   }
   * body main .contact form input::-webkit-input-placeholder {
     color: #eaeaea;
@@ -826,7 +811,7 @@ aside ul li a img {
     color: #eaeaea;
   }
   * body main .contact form textarea {
-    background-color: #232323;
+    background-color: #272838;
     caret-color: #eaeaea;
     color: #eaeaea;
   }
@@ -843,11 +828,11 @@ aside ul li a img {
     color: #eaeaea;
   }
   * body main .contact form #send {
-    background-color: #0177de;
-    color: #080808;
+    background-color: #0edb94;
+    color: #181c22;
   }
   * body main .contact form #send:hover {
-    background-color: #309eff;
+    background-color: #08f6a2;
   }
   * body .success section h2 {
     color: #eaeaea;
@@ -856,10 +841,10 @@ aside ul li a img {
     color: #eaeaea;
   }
   * body .success section a {
-    color: #0177de;
+    color: #ffd679;
   }
   * body .success section a:hover {
-    color: #309eff;
+    color: #ffb300;
   }
 }
 /*# sourceMappingURL=style.css.map */
