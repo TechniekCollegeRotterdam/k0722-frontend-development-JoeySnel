@@ -336,6 +336,7 @@
 
                 a:hover {
                     text-decoration: underline;
+                    color: $altAccent;
                 }
             }
         }
@@ -745,6 +746,10 @@
 
                     a {
                         color: $darkAccent;
+                    }
+
+                    a:hover {
+                        color: $darkAltAccent;
                     }
                 }
             }

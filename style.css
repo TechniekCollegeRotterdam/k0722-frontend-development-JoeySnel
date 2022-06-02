@@ -552,6 +552,7 @@ aside ul li a img {
 
 * body .success section a:hover {
   text-decoration: underline;
+  color: #0177de;
 }
 
 @media only screen and (min-width: 768px) {
@@ -856,6 +857,9 @@ aside ul li a img {
   }
   * body .success section a {
     color: #0177de;
+  }
+  * body .success section a:hover {
+    color: #309eff;
   }
 }
 /*# sourceMappingURL=style.css.map */
