@@ -158,12 +158,12 @@ aside ul li a img {
 }
 
 * {
+  -webkit-tap-highlight-color: transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  overscroll-behavior: none;
 }
 
 * body {
@@ -183,6 +183,7 @@ aside ul li a img {
   padding: 10%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#e2f1fa), color-stop(#f4fafc), to(#e2f1fa));
   background-image: linear-gradient(to bottom right, #e2f1fa, #f4fafc, #e2f1fa);
+  border-radius: 10px;
 }
 
 * body main .about img {
@@ -193,7 +194,7 @@ aside ul li a img {
 }
 
 * body main .about .hello {
-  padding-top: 15px;
+  padding: 15px 0 0 0;
 }
 
 * body main .about .hello h1 {
@@ -202,7 +203,7 @@ aside ul li a img {
 
 * body main .about .hello p {
   font-size: 18px;
-  margin-top: 10px;
+  padding: 10px 0 0 0;
   font-style: italic;
   color: #292f37;
 }
@@ -232,7 +233,7 @@ aside ul li a img {
 }
 
 * body main .skills h2 {
-  margin-bottom: 20px;
+  padding: 0 0 20px 0;
   font-size: 24px;
 }
 
@@ -271,35 +272,135 @@ aside ul li a img {
 
 * body main .skills .progress-bar-container #html {
   width: 85%;
+  -webkit-animation: html 1.5s ease;
+          animation: html 1.5s ease;
+}
+
+@-webkit-keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
 }
 
 * body main .skills .progress-bar-container #css {
   width: 75%;
+  -webkit-animation: css 1.5s ease;
+          animation: css 1.5s ease;
+}
+
+@-webkit-keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
 }
 
 * body main .skills .progress-bar-container #js {
   width: 45%;
+  -webkit-animation: js 1.5s ease;
+          animation: js 1.5s ease;
+}
+
+@-webkit-keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
 }
 
 * body main .skills .progress-bar-container #php {
   width: 35%;
+  -webkit-animation: php 1.5s ease;
+          animation: php 1.5s ease;
+}
+
+@-webkit-keyframes php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+
+@keyframes php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
 }
 
 * body main .skills .progress-bar-container #sql {
   width: 35%;
+  -webkit-animation: sql 1.5s ease;
+          animation: sql 1.5s ease;
+}
+
+@-webkit-keyframes sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+
+@keyframes sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
 }
 
 * body main .portfolio h2 {
-  margin-bottom: 20px;
+  padding: 0 0 20px 0;
 }
 
 * body main .portfolio p {
-  margin-bottom: 20px;
+  padding: 0 0 20px 0;
   font-size: 18px;
 }
 
 * body main .portfolio h3 {
-  margin-bottom: 10px;
+  padding: 0 0 10px 0;
 }
 
 * body main .portfolio video {
@@ -310,12 +411,12 @@ aside ul li a img {
 
 * body main .links h2 {
   font-size: 24px;
-  margin-bottom: 20px;
+  padding: 0 0 20px 0;
 }
 
 * body main .links ul li {
   list-style: none;
-  margin-bottom: 20px;
+  padding: 0 0 20px 0;
 }
 
 * body main .links ul li a {
@@ -344,7 +445,7 @@ aside ul li a img {
 
 * body main .contact h2 {
   font-size: 24px;
-  margin-bottom: 20px;
+  padding: 0 0 20px 0;
 }
 
 * body main .contact p {
@@ -374,12 +475,10 @@ aside ul li a img {
 }
 
 * body main .contact form input:-webkit-autofill,
-* body main .contact form input:-webkit-autofill:hover,
-* body main .contact form input:-webkit-autofill:focus,
-* body main .contact form input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #cbdfea inset !important;
-          box-shadow: 0 0 0 30px #cbdfea inset !important;
-  color: #292f37;
+* body main .contact form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 30px #cbdfea inset;
+          box-shadow: 0 0 0 30px #cbdfea inset;
+  -webkit-text-fill-color: #292f37;
 }
 
 * body main .contact form input::-webkit-input-placeholder {
@@ -534,35 +633,50 @@ aside ul li a img {
 
 * body main .contact form #send:hover {
   background-color: #995dcd;
-  border-bottom: none;
 }
 
-* body .success section h2 {
+* #successBody {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* #successBody .success {
+  padding: 10%;
+}
+
+* #successBody .success section h2 {
   font-size: 24px;
   padding: 0 0 20px 0;
 }
 
-* body .success section p {
+* #successBody .success section p {
   padding: 0 0 10px 0;
 }
 
-* body .success section a {
+* #successBody .success section a {
   text-decoration: none;
   color: #61d0d8;
 }
 
-* body .success section a:hover {
+* #successBody .success section a:hover {
   text-decoration: underline;
   color: #67b6f4;
 }
 
 @media only screen and (min-width: 768px) {
   * body {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 80vw;
-        grid-template-columns: 80vw;
-        grid-template-areas: "main";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -574,9 +688,8 @@ aside ul li a img {
     display: none;
   }
   * body main {
-    width: 100%;
-    padding: 10%;
-    margin: 0 auto;
+    width: 80vw;
+    padding: 8%;
     row-gap: 150px;
   }
   * body main .about {
@@ -599,17 +712,18 @@ aside ul li a img {
     margin: auto 0 0px;
   }
   * body main .about .hello h1 {
-    font-size: 32px;
+    font-size: 38px;
   }
   * body main .about .hello p {
-    font-size: 20px;
+    font-size: 22px;
   }
   * body main .about .hello #download {
     font-size: 24px;
     margin-top: 25px;
   }
   * body main .skills h2 {
-    font-size: 30px;
+    font-size: 36px;
+    padding: 0 0 40px 0;
   }
   * body main .skills label {
     font-size: 20px;
@@ -619,19 +733,20 @@ aside ul li a img {
     margin: 10px 0 20px;
   }
   * body main .portfolio h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 36px;
+    padding: 0 0 40px 0;
   }
   * body main .portfolio p {
-    margin-bottom: 20px;
+    padding: 0 0 20px 0;
     font-size: 20px;
   }
   * body main .portfolio h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
+    padding: 0 0 10px 0;
+    font-size: 22px;
   }
   * body main .links h2 {
-    font-size: 30px;
+    font-size: 36px;
+    padding: 0 0 40px 0;
   }
   * body main .links ul li a {
     font-size: 20px;
@@ -643,7 +758,8 @@ aside ul li a img {
     width: 100%;
   }
   * body main .contact h2 {
-    font-size: 30px;
+    font-size: 36px;
+    padding: 0 0 40px 0;
   }
   * body main .contact p {
     font-size: 20px;
@@ -681,42 +797,48 @@ aside ul li a img {
   * body main .contact form #send {
     width: 100%;
   }
-  * body .success {
-    padding: 10%;
-    margin: 10% auto;
+  * #successBody .success {
+    width: 80vw;
+    padding: 8%;
+    margin: 0 auto;
   }
-  * body .success section h2 {
-    font-size: 30px;
+  * #successBody .success section h2 {
+    font-size: 36px;
+    padding: 0 0 40px 0;
+  }
+  * #successBody .success section p {
     padding: 0 0 20px 0;
-  }
-  * body .success section p {
-    padding: 0 0 10px 0;
     font-size: 20px;
   }
-  * body .success section a {
-    right: 0;
+  * #successBody .success section a {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   * body main {
-    padding: 10%;
-    width: 90%;
+    width: 72vw;
+  }
+  * #successBody .success {
+    width: 72vw;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   * body main {
-    padding: 10%;
-    width: 80%;
+    width: 64vw;
+  }
+  * #successBody .success {
+    width: 64vw;
   }
 }
 
 @media only screen and (min-width: 2560px) {
   * body main {
-    padding: 10%;
-    width: 60%;
+    width: 48vw;
+  }
+  * #successBody .success {
+    width: 48vw;
   }
 }
 
@@ -793,12 +915,10 @@ aside ul li a img {
     caret-color: #eaeaea;
   }
   * body main .contact form input:-webkit-autofill,
-  * body main .contact form input:-webkit-autofill:hover,
-  * body main .contact form input:-webkit-autofill:focus,
-  * body main .contact form input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #272838 inset !important;
-            box-shadow: 0 0 0 30px #272838 inset !important;
-    color: #eaeaea;
+  * body main .contact form input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px #272838 inset;
+            box-shadow: 0 0 0 30px #272838 inset;
+    -webkit-text-fill-color: #eaeaea;
   }
   * body main .contact form input::-webkit-input-placeholder {
     color: #eaeaea;
@@ -836,19 +956,16 @@ aside ul li a img {
   * body main .contact form #send:hover {
     background-color: #08f6a2;
   }
-  * body .success {
-    border-radius: 3px;
-  }
-  * body .success section h2 {
+  * #successBody .success section h2 {
     color: #eaeaea;
   }
-  * body .success section p {
+  * #successBody .success section p {
     color: #eaeaea;
   }
-  * body .success section a {
+  * #successBody .success section a {
     color: #ffd679;
   }
-  * body .success section a:hover {
+  * #successBody .success section a:hover {
     color: #ffb300;
   }
 }

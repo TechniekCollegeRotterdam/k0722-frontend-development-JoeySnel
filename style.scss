@@ -3,11 +3,11 @@
 @import "_aside";
 
 * {
+    -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    overscroll-behavior: none;
 
     body {
         overflow: visible;
@@ -18,8 +18,8 @@
             flex-direction: column;
             row-gap: 200px;
             padding: 10%;
-            // background-color: $main;
             background-image: linear-gradient(to bottom right, $body, $main, $body);
+            border-radius: 10px;
 
             .about {
                 img {
@@ -30,7 +30,8 @@
                 }
 
                 .hello {
-                    padding-top: 15px;
+                    padding: 15px 0 0 0;
+
 
                     h1 {
                         font-size: 28px;
@@ -38,7 +39,7 @@
 
                     p {
                         font-size: 18px;
-                        margin-top: 10px;
+                        padding: 10px 0 0 0;
                         font-style: italic;
                         color: $font;
                     }
@@ -61,7 +62,9 @@
 
                     #download:hover {
                         background-color: $buttonPress;
+                        // box-shadow: 0 0 5px $buttonPress;
                     }
+
                 }
             }
 
@@ -69,7 +72,8 @@
                 width: 100%;
 
                 h2 {
-                    margin-bottom: 20px;
+                    padding: 0 0 20px 0;
+
                     font-size: 24px;
                 }
 
@@ -104,22 +108,77 @@
 
                     #html {
                         width: 85%;
+                        animation: html 1.5s ease;
+                    }
+
+                    @keyframes html {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 85%;
+                        }
                     }
 
                     #css {
                         width: 75%;
+                        animation: css 1.5s ease;
+                    }
+
+                    @keyframes css {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 75%;
+                        }
                     }
 
                     #js {
                         width: 45%;
+                        animation: js 1.5s ease;
+                    }
+
+                    @keyframes js {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 45%;
+                        }
                     }
 
                     #php {
                         width: 35%;
+                        animation: php 1.5s ease;
+                    }
+
+                    @keyframes php {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 35%;
+                        }
                     }
 
                     #sql {
                         width: 35%;
+                        animation: sql 1.5s ease;
+                    }
+
+                    @keyframes sql {
+                        0% {
+                            width: 0%;
+                        }
+
+                        100% {
+                            width: 35%;
+                        }
                     }
 
                 }
@@ -127,16 +186,19 @@
 
             .portfolio {
                 h2 {
-                    margin-bottom: 20px;
+                    padding: 0 0 20px 0;
+
                 }
 
                 p {
-                    margin-bottom: 20px;
+                    padding: 0 0 20px 0;
+
                     font-size: 18px;
                 }
 
                 h3 {
-                    margin-bottom: 10px;
+                    padding: 0 0 10px 0;
+
                 }
 
                 video {
@@ -150,13 +212,14 @@
 
                 h2 {
                     font-size: 24px;
-                    margin-bottom: 20px;
+                    padding: 0 0 20px 0;
+
                 }
 
                 ul {
                     li {
                         list-style: none;
-                        margin-bottom: 20px;
+                        padding: 0 0 20px 0;
 
                         a {
                             font-size: 18px;
@@ -186,7 +249,7 @@
 
                 h2 {
                     font-size: 24px;
-                    margin-bottom: 20px;
+                    padding: 0 0 20px 0;
                 }
 
                 p {
@@ -210,11 +273,9 @@
                     }
 
                     input:-webkit-autofill,
-                    input:-webkit-autofill:hover,
-                    input:-webkit-autofill:focus,
-                    input:-webkit-autofill:active {
-                        box-shadow: 0 0 0 30px $input inset !important;
-                        color: $font;
+                    input:-webkit-autofill:focus {
+                        box-shadow: 0 0 0 30px $input inset;
+                        -webkit-text-fill-color: $font;
                     }
 
                     input::placeholder {
@@ -291,13 +352,24 @@
 
                     #send:hover {
                         background-color: $buttonPress;
-                        border-bottom: none;
+                        // box-shadow: 0 0 5px $buttonPress;
                     }
                 }
             }
         }
 
+    }
+
+    #successBody {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         .success {
+            padding: 10%;
+
             section {
                 h2 {
                     font-size: 24px;
@@ -329,19 +401,16 @@
                 display: none;
             }
 
-            display: grid;
-            grid-template-columns: 80vw;
-            grid-template-areas: "main";
-            justify-content: center;
-
             aside {
                 display: none;
             }
 
+            display: flex;
+            justify-content: center;
+
             main {
-                width: 100%;
-                padding: 10%;
-                margin: 0 auto;
+                width: 80vw;
+                padding: 8%;
                 row-gap: 150px;
 
                 .about {
@@ -360,11 +429,11 @@
                         margin: auto 0 0px;
 
                         h1 {
-                            font-size: 32px;
+                            font-size: 38px;
                         }
 
                         p {
-                            font-size: 20px;
+                            font-size: 22px;
                         }
 
                         #download {
@@ -377,7 +446,8 @@
                 .skills {
 
                     h2 {
-                        font-size: 30px;
+                        font-size: 36px;
+                        padding: 0 0 40px 0;
                     }
 
                     label {
@@ -392,24 +462,25 @@
 
                 .portfolio {
                     h2 {
-                        font-size: 30px;
-                        margin-bottom: 20px;
+                        font-size: 36px;
+                        padding: 0 0 40px 0;
                     }
 
                     p {
-                        margin-bottom: 20px;
+                        padding: 0 0 20px 0;
                         font-size: 20px;
                     }
 
                     h3 {
-                        margin-bottom: 10px;
-                        font-size: 20px;
+                        padding: 0 0 10px 0;
+                        font-size: 22px;
                     }
                 }
 
                 .links {
                     h2 {
-                        font-size: 30px;
+                        font-size: 36px;
+                        padding: 0 0 40px 0;
                     }
 
                     ul {
@@ -429,7 +500,8 @@
                     width: 100%;
 
                     h2 {
-                        font-size: 30px;
+                        font-size: 36px;
+                        padding: 0 0 40px 0;
                     }
 
                     p {
@@ -471,24 +543,28 @@
                     }
                 }
             }
+        }
 
+        #successBody {
             .success {
-                padding: 10%;
-                margin: 10% auto;
-
+                width: 80vw;
+                padding: 8%;
+                margin: 0 auto;
+    
+    
                 section {
                     h2 {
-                        font-size: 30px;
-                        padding: 0 0 20px 0;
+                        font-size: 36px;
+                        padding: 0 0 40px 0;
                     }
-
+    
                     p {
-                        padding: 0 0 10px 0;
+                        padding: 0 0 20px 0;
                         font-size: 20px;
                     }
-
+    
                     a {
-                        right: 0;
+                        // right: 0;
                         font-size: 20px;
                     }
                 }
@@ -499,8 +575,13 @@
     @media only screen and (min-width: 1024px) {
         body {
             main {
-                padding: 10%;
-                width: 90%;
+                width: 72vw;
+            }
+        }
+
+        #successBody {
+            .success {
+                width: 72vw;
             }
         }
     }
@@ -508,8 +589,13 @@
     @media only screen and (min-width: 1440px) {
         body {
             main {
-                padding: 10%;
-                width: 80%;
+                width: 64vw;
+            }
+        }
+        
+        #successBody {
+            .success {
+                width: 64vw;
             }
         }
     }
@@ -517,8 +603,13 @@
     @media only screen and (min-width: 2560px) {
         body {
             main {
-                padding: 10%;
-                width: 60%;
+                width: 48vw;
+            }
+        }
+       
+        #successBody {
+            .success {
+                width: 48vw;
             }
         }
     }
@@ -551,6 +642,7 @@
 
                         #download:hover {
                             background-color: $buttonPress2;
+                            // box-shadow: 0 0 5px $buttonPress2;
                         }
                     }
                 }
@@ -640,11 +732,9 @@
                         }
 
                         input:-webkit-autofill,
-                        input:-webkit-autofill:hover,
-                        input:-webkit-autofill:focus,
-                        input:-webkit-autofill:active {
-                            box-shadow: 0 0 0 30px $input2 inset !important;
-                            color: $font2;
+                        input:-webkit-autofill:focus {
+                            box-shadow: 0 0 0 30px $input2 inset;
+                            -webkit-text-fill-color: $font2;
                         }
 
                         input::placeholder {
@@ -668,27 +758,29 @@
 
                         #send:hover {
                             background-color: $buttonPress2;
+                            // box-shadow: 0 0 5px $buttonPress2;
                         }
                     }
                 }
             }
-
+        }
+        
+        #successBody {
             .success {
-                border-radius: 3px;
 
                 section {
                     h2 {
                         color: $font2;
                     }
-
+    
                     p {
                         color: $font2;
                     }
-
+    
                     a {
                         color: $link2;
                     }
-
+    
                     a:hover {
                         color: $link2Hover;
                     }
