@@ -265,8 +265,8 @@ aside ul li a img {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#47e5c2), color-stop(#61c4e7), to(#6786f4));
-  background-image: linear-gradient(to right, #47e5c2, #61c4e7, #6786f4);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffae7f), color-stop(#ff9354), to(#ff6a13));
+  background-image: linear-gradient(to right, #ffae7f, #ff9354, #ff6a13);
 }
 
 * body main .skills .progress-bar-container #html {
@@ -321,7 +321,7 @@ aside ul li a img {
 * body main .links ul li a {
   font-size: 18px;
   text-decoration: none;
-  color: #0091ff;
+  color: #299df5;
 }
 
 * body main .links ul li a img {
@@ -331,8 +331,7 @@ aside ul li a img {
 }
 
 * body main .links ul li a:hover {
-  text-decoration: underline;
-  color: #0082c2;
+  color: #00bfff;
 }
 
 * body main .contact {
@@ -635,7 +634,7 @@ aside ul li a img {
     font-size: 30px;
   }
   * body main .links ul li a {
-    font-size: 22px;
+    font-size: 20px;
   }
   * body main .links ul li a img {
     width: 40px;
