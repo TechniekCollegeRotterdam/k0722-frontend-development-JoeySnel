@@ -433,6 +433,7 @@ aside ul li a img {
 
 * body main .links ul li a:hover {
   color: #00bfff;
+  text-decoration: underline;
 }
 
 * body main .contact {

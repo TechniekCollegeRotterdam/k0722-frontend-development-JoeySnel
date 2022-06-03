@@ -5,17 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="robots" content="follow, index">
-    <meta name="description" content="I'm Joey Snel, a Dutch software developer student from the Netherlands."> -->
-    <link rel="icon" href="img/svg/favicon.svg" sizes="any" type="image/svg+xml">
-    <!-- <link rel="canonical" href="https://www.joeysnel.nl/"> -->
+    <link rel="icon" id="faviconTag" href="img/svg/user-ligthmode.svg" sizes="any" type="image/svg+xml">
     <title>Joey Snel | Portfolio | Contact Succes</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="successBody">
-    <!-- <div id="nav-placeholder"></div> -->
-    <!-- <div id="aside-placeholder"></div> -->
 
     <main class="success">
         <section>
@@ -24,18 +19,20 @@
             <a href="https://joeysnel.nl">Ga terug naar mijn pagina</a>
         </section>
     </main>
-    <!-- <script src="index.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
-    <!-- <script>
-        $(function () {
-            $("#nav-placeholder").load("nav.html");
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#aside-placeholder").load("aside.html");
-        });
-    </script> -->
 </body>
+
+<script>
+    const faviconTag = document.getElementById('faviconTag');
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const changeFavicon = () => {
+        if (isDark.matches) faviconTag.href = 'img/svg/user-darkmode.svg';
+        else faviconTag.href = 'img/svg/user-ligthmode.svg';
+    };
+
+    changeFavicon();
+
+    setInterval(changeFavicon, 200);
+</script>
 
 </html>
