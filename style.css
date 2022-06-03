@@ -837,6 +837,9 @@ aside ul li a img {
   * body main .contact form #send:hover {
     background-color: #08f6a2;
   }
+  * body .success {
+    border-radius: 3px;
+  }
   * body .success section h2 {
     color: #eaeaea;
   }
