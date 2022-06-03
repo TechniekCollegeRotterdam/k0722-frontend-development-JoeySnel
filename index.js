@@ -25,3 +25,21 @@ function myFunction(x) {
 var x = window.matchMedia("(max-width: 700px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
+
+// Index HTML code + script voor toevoegen van menu's
+
+/* <div id="nav-placeholder"></div>
+<div id="aside-placeholder"></div> */
+
+// <script src="index.js"></script>
+//     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+//     <script>
+//         $(function () {
+//             $("#nav-placeholder").load("nav.html");
+//         });
+//     </script>
+//     <script>
+//         $(function () {
+//             $("#aside-placeholder").load("aside.html");
+//         });
+//     </script>

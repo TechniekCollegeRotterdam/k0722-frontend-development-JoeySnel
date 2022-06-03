@@ -18,7 +18,8 @@
             flex-direction: column;
             row-gap: 200px;
             padding: 10%;
-            background-color: $main;
+            // background-color: $main;
+            background-image: linear-gradient(to bottom right, $body, $main, $body);
 
             .about {
                 img {
@@ -48,10 +49,10 @@
 
                     #download {
                         display: block;
-                        background-color: $accent;
+                        background-color: $button;
                         border: none;
                         border-radius: 3px;
-                        color: $font;
+                        color: $main;
                         font-size: 18px;
                         padding: 10px 20px;
                         margin-top: 10px;
@@ -59,7 +60,7 @@
                     }
 
                     #download:hover {
-                        background-color: $secondAccent;
+                        background-color: $buttonPress;
                     }
                 }
             }
@@ -98,7 +99,7 @@
                         right: 0;
                         bottom: 0;
                         left: 0;
-                        background-image: linear-gradient(to right, $accent, blue);
+                        background-image: linear-gradient(to right, $progress, $progressGradient, $progressGradient2);
                     }
 
                     #html {
@@ -160,7 +161,7 @@
                         a {
                             font-size: 18px;
                             text-decoration: none;
-                            color: $accent;
+                            color: $link;
 
                             img {
                                 width: 35px;
@@ -171,7 +172,7 @@
 
                         a:hover {
                             text-decoration: underline;
-                            color: $secondAccent;
+                            color: $linkHover;
                         }
                     }
                 }
@@ -214,6 +215,7 @@
                     input:-webkit-autofill:focus,
                     input:-webkit-autofill:active {
                         box-shadow: 0 0 0 30px $input inset !important;
+                        color: $font;
                     }
 
                     input::placeholder {
@@ -283,13 +285,13 @@
                         width: 60%;
                         margin: 5px auto 0;
                         right: 0;
-                        background-color: $accent;
+                        background-color: $button;
                         color: $main;
                         cursor: pointer;
                     }
 
                     #send:hover {
-                        background-color: $secondAccent;
+                        background-color: $buttonPress;
                         border-bottom: none;
                     }
                 }
@@ -544,12 +546,12 @@
                     a {
 
                         #download {
-                            background-color: $accent2;
+                            background-color: $button2;
                             color: $main2;
                         }
 
                         #download:hover {
-                            background-color: $secondAccent2;
+                            background-color: $buttonPress2;
                         }
                     }
                 }
@@ -569,7 +571,7 @@
                         background-color: $input2;
 
                         .progress-bar-indicator::before {
-                            background-image: linear-gradient(to right, #463fb7, #6644d1, #7d43b2);
+                            background-image: linear-gradient(to right, $progress2, $darkProgressGradient, $darkProgressGradient2);
                         }
                     }
                 }
@@ -597,7 +599,7 @@
                     ul {
                         li {
                             a {
-                                color: $hyperlink2;
+                                color: $link2;
 
                                 #linkedin {
                                     content: url(img/svg/linkedin-darkmode.svg);
@@ -615,7 +617,7 @@
                             }
 
                             a:hover {
-                                color: $secondHyperlink2;
+                                color: $link2Hover;
                             }
                         }
                     }
@@ -643,6 +645,7 @@
                         input:-webkit-autofill:focus,
                         input:-webkit-autofill:active {
                             box-shadow: 0 0 0 30px $input2 inset !important;
+                            color: $font2;
                         }
 
                         input::placeholder {
@@ -660,12 +663,12 @@
                         }
 
                         #send {
-                            background-color: $accent2;
+                            background-color: $button2;
                             color: $main2;
                         }
 
                         #send:hover {
-                            background-color: $secondAccent2;
+                            background-color: $buttonPress2;
                         }
                     }
                 }
@@ -682,11 +685,11 @@
                     }
 
                     a {
-                        color: $hyperlink2;
+                        color: $link2;
                     }
 
                     a:hover {
-                        color: $secondHyperlink2;
+                        color: $link2Hover;
                     }
                 }
             }

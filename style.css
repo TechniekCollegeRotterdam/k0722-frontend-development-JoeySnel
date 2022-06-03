@@ -58,7 +58,7 @@ nav ul {
   height: 100vh;
   top: 0;
   padding-top: 80px;
-  background: #f0f8ff;
+  background: #f4fafc;
   text-align: center;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -69,7 +69,7 @@ nav ul li {
   line-height: 50px;
   -webkit-transition: all .5s;
   transition: all .5s;
-  border-bottom: solid 3px #0088ff;
+  border-bottom: solid 3px #61d0d8;
   width: 70%;
 }
 
@@ -168,7 +168,7 @@ aside ul li a img {
 
 * body {
   overflow: visible;
-  background-color: #ffffff;
+  background-color: #e2f1fa;
 }
 
 * body main {
@@ -181,7 +181,8 @@ aside ul li a img {
           flex-direction: column;
   row-gap: 200px;
   padding: 10%;
-  background-color: #f0f8ff;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#e2f1fa), color-stop(#f4fafc), to(#e2f1fa));
+  background-image: linear-gradient(to bottom right, #e2f1fa, #f4fafc, #e2f1fa);
 }
 
 * body main .about img {
@@ -203,7 +204,7 @@ aside ul li a img {
   font-size: 18px;
   margin-top: 10px;
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .about a {
@@ -212,10 +213,10 @@ aside ul li a img {
 
 * body main .about a #download {
   display: block;
-  background-color: #0088ff;
+  background-color: #ac51fc;
   border: none;
   border-radius: 3px;
-  color: #00000080;
+  color: #f4fafc;
   font-size: 18px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -223,7 +224,7 @@ aside ul li a img {
 }
 
 * body main .about a #download:hover {
-  background-color: #0177de;
+  background-color: #995dcd;
 }
 
 * body main .skills {
@@ -242,7 +243,7 @@ aside ul li a img {
 * body main .skills .progress-bar-container {
   width: 100%;
   height: 40px;
-  background-color: #d4dbe2;
+  background-color: #cbdfea;
   border-radius: 3px;
   overflow: hidden;
   margin: 10px 0 20px 0;
@@ -264,8 +265,8 @@ aside ul li a img {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#0088ff), to(blue));
-  background-image: linear-gradient(to right, #0088ff, blue);
+  background-image: -webkit-gradient(linear, left top, right top, from(#47e5c2), color-stop(#61c4e7), to(#6786f4));
+  background-image: linear-gradient(to right, #47e5c2, #61c4e7, #6786f4);
 }
 
 * body main .skills .progress-bar-container #html {
@@ -320,7 +321,7 @@ aside ul li a img {
 * body main .links ul li a {
   font-size: 18px;
   text-decoration: none;
-  color: #0088ff;
+  color: #0091ff;
 }
 
 * body main .links ul li a img {
@@ -331,7 +332,7 @@ aside ul li a img {
 
 * body main .links ul li a:hover {
   text-decoration: underline;
-  color: #0177de;
+  color: #0082c2;
 }
 
 * body main .contact {
@@ -367,38 +368,39 @@ aside ul li a img {
   height: 50px;
   border: none;
   border-radius: 2px;
-  background-color: #d4dbe2;
+  background-color: #cbdfea;
   font-size: 18px;
   padding: 0 10px;
-  caret-color: #00000080;
+  caret-color: #292f37;
 }
 
 * body main .contact form input:-webkit-autofill,
 * body main .contact form input:-webkit-autofill:hover,
 * body main .contact form input:-webkit-autofill:focus,
 * body main .contact form input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #d4dbe2 inset !important;
-          box-shadow: 0 0 0 30px #d4dbe2 inset !important;
+  -webkit-box-shadow: 0 0 0 30px #cbdfea inset !important;
+          box-shadow: 0 0 0 30px #cbdfea inset !important;
+  color: #292f37;
 }
 
 * body main .contact form input::-webkit-input-placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form input:-ms-input-placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form input::-ms-input-placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form input::placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form input:focus {
@@ -468,7 +470,7 @@ aside ul li a img {
 * body main .contact form textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #d4dbe2;
+  background-color: #cbdfea;
   border: none;
   border-radius: 2px;
   min-height: 200px;
@@ -476,7 +478,7 @@ aside ul li a img {
   resize: vertical;
   font-size: 18px;
   padding: 10px;
-  caret-color: #00000080;
+  caret-color: #292f37;
   overflow-y: scroll;
   resize: none;
   overflow: auto;
@@ -484,22 +486,22 @@ aside ul li a img {
 
 * body main .contact form textarea::-webkit-input-placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form textarea:-ms-input-placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form textarea::-ms-input-placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form textarea::placeholder {
   font-style: italic;
-  color: #00000080;
+  color: #292f37;
 }
 
 * body main .contact form textarea:focus {
@@ -526,13 +528,13 @@ aside ul li a img {
   width: 60%;
   margin: 5px auto 0;
   right: 0;
-  background-color: #0088ff;
-  color: #f0f8ff;
+  background-color: #ac51fc;
+  color: #f4fafc;
   cursor: pointer;
 }
 
 * body main .contact form #send:hover {
-  background-color: #0177de;
+  background-color: #995dcd;
   border-bottom: none;
 }
 
@@ -547,12 +549,12 @@ aside ul li a img {
 
 * body .success section a {
   text-decoration: none;
-  color: #0088ff;
+  color: #61d0d8;
 }
 
 * body .success section a:hover {
   text-decoration: underline;
-  color: #0177de;
+  color: #67b6f4;
 }
 
 @media only screen and (min-width: 768px) {
@@ -724,8 +726,8 @@ aside ul li a img {
     background-color: #1a1a30;
   }
   * body main {
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#1a1a30), color-stop(#181c22), to(#1a1a30));
-    background-image: linear-gradient(to bottom right, #1a1a30, #181c22, #1a1a30);
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#1a1a30), color-stop(#14171c), to(#1a1a30));
+    background-image: linear-gradient(to bottom right, #1a1a30, #14171c, #1a1a30);
   }
   * body main .about .hello h1 {
     color: #eaeaea;
@@ -735,7 +737,7 @@ aside ul li a img {
   }
   * body main .about a #download {
     background-color: #0edb94;
-    color: #181c22;
+    color: #14171c;
   }
   * body main .about a #download:hover {
     background-color: #08f6a2;
@@ -797,6 +799,7 @@ aside ul li a img {
   * body main .contact form input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #272838 inset !important;
             box-shadow: 0 0 0 30px #272838 inset !important;
+    color: #eaeaea;
   }
   * body main .contact form input::-webkit-input-placeholder {
     color: #eaeaea;
@@ -829,7 +832,7 @@ aside ul li a img {
   }
   * body main .contact form #send {
     background-color: #0edb94;
-    color: #181c22;
+    color: #14171c;
   }
   * body main .contact form #send:hover {
     background-color: #08f6a2;

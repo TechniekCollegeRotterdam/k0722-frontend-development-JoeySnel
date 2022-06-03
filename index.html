@@ -2,21 +2,27 @@
 <html lang="nl">
 
 <head>
+    <title>Joey Snel | Portfolio</title>
+    <meta name="description" content="Joey Snel">
+    <meta name="KEYWORDS" content="Joey Snel, student, software developer, frontend developer, portfolio">
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:title" content="Web Developer Portfolio" />
+    <meta property="og:description"
+        content="Portfolio website made by a software developer student as a cool frontend project for school and personal use." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.joeysnel.nl" />
+    <meta name="description"
+        content="Software development portfolio made by Joey Snel, a Dutch student from the Netherlands.">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="follow, index">
-    <meta name="description"
-        content="Ik ben Joey Snel, student software development aan het Techniek College Rotterdam.">
-    <link rel="icon" href="img/svg/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="img/svg/user-lightmode.svg" sizes="any" type="image/svg+xml" id="faviconTag">
     <link rel="canonical" href="https://www.joeysnel.nl/">
-    <title>Joey Snel | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="body">
-    <div id="nav-placeholder"></div>
-    <div id="aside-placeholder"></div>
 
     <main>
         <section class="about">
@@ -27,11 +33,9 @@
                     Gedreven software developer in opleiding.
                 </p>
                 <a href="document/joeysnel_cv.pdf" download>
-                    <!-- <button>Download mijn CV!</button> -->
-                    <input type="submit" name="download" id="download" value="Download mijn CV!">
+                    <input type="submit" name="download" id="download" value="Download CV">
                 </a>
             </div>
-            <!-- <button onclick="location.href='document/joeysnel_cv.pdf';">Bekijk mijn CV!</button> -->
         </section>
         <section class="skills">
             <h2>Skills</h2>
@@ -71,16 +75,16 @@
             <h2>Links</h2>
             <ul>
                 <li>
-                    <a href="https://www.linkedin.com/in/joey-snel-5600b3236/"><img id="linkedin" src="img/svg/linkedin-brands.svg"
-                            alt="Mijn LinkedIn">https://www.linkedin.com/in/joey-snel-5600b3236/</a>
+                    <a href="https://www.linkedin.com/in/joey-snel-5600b3236/"><img id="linkedin"
+                            src="img/svg/linkedin-brands.svg" alt="Mijn LinkedIn">Connect met mij op LinkedIn</a>
                 </li>
                 <li>
                     <a href="https://github.com/JoeySnel"><img id="github" src="img/svg/github-brands.svg"
-                            alt="Mijn GitHub">https://github.com/JoeySnel</a>
+                            alt="Mijn GitHub">Neem een kijkje op mijn GitHub profiel</a>
                 </li>
                 <li>
                     <a href="mailto:joey_snel@outlook.com, 9016797@student.zadkine.nl"><img id="paperplane"
-                            src="img/svg/paper-plane-solid.svg" alt="Mijn Mail">joey_snel@outlook.com</a>
+                            src="img/svg/paper-plane-solid.svg" alt="Mijn Mail">Stuur mij een e-mail</a>
                 </li>
             </ul>
         </section>
@@ -110,18 +114,21 @@
             </form>
         </section>
     </main>
-    <!-- <script src="index.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
-    <!-- <script>
-        $(function () {
-            $("#nav-placeholder").load("nav.html");
-        });
-    </script>
+
     <script>
-        $(function () {
-            $("#aside-placeholder").load("aside.html");
-        });
-    </script> -->
+        const faviconTag = document.getElementById('faviconTag');
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const changeFavicon = () => {
+            if (isDark.matches) faviconTag.href = 'img/svg/user-darkmode.svg';
+            else faviconTag.href = 'img/svg/user-ligthmode.svg';
+        };
+
+        changeFavicon();
+
+        setInterval(changeFavicon, 200);
+    </script>
+
 </body>
 
 </html>
