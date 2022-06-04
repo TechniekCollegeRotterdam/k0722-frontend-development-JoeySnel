@@ -116,6 +116,43 @@
     </main>
 
     <script>
+        const skillSection = document.querySelector(".skills");
+
+        const htmlBar = document.querySelector('#html');
+        const cssBar = document.querySelector('#css');
+        const jsBar = document.querySelector('#js');
+        const phpBar = document.querySelector('#php');
+        const sqlBar = document.querySelector('#sql');
+
+        const options = {
+            root: null,
+            threshold: 0,
+            rootMargin: "0px 0px -81px 0px"
+        };
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                console.log(entry.isIntersecting);
+                if(!entry.isIntersecting) {
+                    htmlBar.style.display = "none";
+                    cssBar.style.display = "none";
+                    jsBar.style.display = "none";
+                    phpBar.style.display = "none";
+                    sqlBar.style.display = "none";
+                    return;
+                };
+                htmlBar.style.display = "block";
+                cssBar.style.display = "block";
+                jsBar.style.display = "block";
+                phpBar.style.display = "block";
+                sqlBar.style.display = "block";
+            });
+        }, options);
+
+        observer.observe(skillSection);
+    </script>
+
+    <script>
         const faviconTag = document.getElementById('faviconTag');
         const isDark = window.matchMedia('(prefers-color-scheme: dark)');
 
