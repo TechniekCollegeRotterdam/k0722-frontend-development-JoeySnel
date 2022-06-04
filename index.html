@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/svg/user-lightmode.svg" sizes="any" type="image/svg+xml" id="faviconTag">
+    <link rel="icon" href="images/svg/user-lightmode.svg" sizes="any" type="image/svg+xml" id="faviconTag">
     <link rel="canonical" href="https://www.joeysnel.nl/">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,7 +26,7 @@
 
     <main>
         <section class="about">
-            <img src="img/IMG_7302.jpeg" alt="Joey Snel">
+            <img src="images/IMG_7302.jpeg" alt="Joey Snel">
             <div class="hello">
                 <h1>Hoi, ik ben Joey</h1>
                 <p>
@@ -69,22 +69,22 @@
             <p>Een aantal recente projecten waar ik trots op bent. Voorlopig zal deze enkel bestaan uit schoolprojecten,
                 maar in de toekomst zal ik hier nog veel meer aan toevoegen.</p>
             <h3>Javascript game</h3>
-            <video id="my-video" src="img/fighting-game-recording.mp4" controls alt="Fighting-game video"></video>
+            <video autoplay muted id="my-video" src="videos/fighting-game-video.mp4" alt="Fighting-game video"></video>
         </section>
         <section class="links">
             <h2>Links</h2>
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/joey-snel-5600b3236/"><img id="linkedin"
-                            src="img/svg/linkedin-brands.svg" alt="Mijn LinkedIn">Connect met mij op LinkedIn</a>
+                            src="images/svg/linkedin-brands.svg" alt="Mijn LinkedIn">Connect met mij op LinkedIn</a>
                 </li>
                 <li>
-                    <a href="https://github.com/JoeySnel"><img id="github" src="img/svg/github-brands.svg"
+                    <a href="https://github.com/JoeySnel"><img id="github" src="images/svg/github-brands.svg"
                             alt="Mijn GitHub">Bekijk mijn GitHub profiel</a>
                 </li>
                 <li>
                     <a href="mailto:joey_snel@outlook.com, 9016797@student.zadkine.nl"><img id="paperplane"
-                            src="img/svg/paper-plane-solid.svg" alt="Mijn Mail">Stuur mij een e-mail</a>
+                            src="images/svg/paper-plane-solid.svg" alt="Mijn Mail">Stuur mij een e-mail</a>
                 </li>
             </ul>
         </section>
@@ -132,8 +132,8 @@
 
         const observer = new IntersectionObserver(function (entries, observer) {
             entries.forEach(entry => {
-                console.log(entry.isIntersecting);
-                if(!entry.isIntersecting) {
+                // console.log(entry.isIntersecting);
+                if (!entry.isIntersecting) {
                     htmlBar.style.display = "none";
                     cssBar.style.display = "none";
                     jsBar.style.display = "none";
@@ -153,12 +153,35 @@
     </script>
 
     <script>
+        const video = document.querySelector("#my-video");
+
+        const options2 = {
+            root: null,
+            threshold: 0,
+            rootMargin: ""
+        };
+
+        const observer2 = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                console.log(entry.isIntersecting);
+                if (!entry.isIntersecting) {
+                    video.pause();
+                    return;
+                };
+                video.play();
+            });
+        }, options2);
+
+        observer2.observe(video);
+    </script>
+
+    <script>
         const faviconTag = document.getElementById('faviconTag');
         const isDark = window.matchMedia('(prefers-color-scheme: dark)');
 
         const changeFavicon = () => {
-            if (isDark.matches) faviconTag.href = 'img/svg/user-darkmode.svg';
-            else faviconTag.href = 'img/svg/user-ligthmode.svg';
+            if (isDark.matches) faviconTag.href = 'images/svg/user-darkmode.svg';
+            else faviconTag.href = 'images/svg/user-ligthmode.svg';
         };
 
         changeFavicon();

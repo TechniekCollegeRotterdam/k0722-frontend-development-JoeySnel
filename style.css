@@ -893,13 +893,13 @@ aside ul li a img {
     color: #ffd679;
   }
   * body main .links ul li a #linkedin {
-    content: url(img/svg/linkedin-darkmode.svg);
+    content: url(images/svg/linkedin-darkmode.svg);
   }
   * body main .links ul li a #github {
-    content: url(img/svg/github-darkmode.svg);
+    content: url(images/svg/github-darkmode.svg);
   }
   * body main .links ul li a #paperplane {
-    content: url(img/svg/paper-plane-darkmode.svg);
+    content: url(images/svg/paper-plane-darkmode.svg);
   }
   * body main .links ul li a:hover {
     color: #ffb300;
