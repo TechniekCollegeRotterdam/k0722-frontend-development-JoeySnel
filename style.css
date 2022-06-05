@@ -640,7 +640,7 @@ aside ul li a img {
   background-color: #995dcd;
 }
 
-* #successBody {
+* .message-body {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -654,25 +654,34 @@ aside ul li a img {
           align-items: center;
 }
 
-* #successBody .success {
+* .message-body .message {
   padding: 10%;
 }
 
-* #successBody .success section h2 {
+* .message-body .message section h2 {
   font-size: 24px;
   padding: 0 0 20px 0;
 }
 
-* #successBody .success section p {
+* .message-body .message section p {
   padding: 0 0 10px 0;
 }
 
-* #successBody .success section a {
+* .message-body .message section ul p {
+  padding: 0 0 10px 0;
+}
+
+* .message-body .message section ul li {
+  color: #292f37;
+  padding: 0 0 10px 0;
+}
+
+* .message-body .message section a {
   text-decoration: none;
   color: #61d0d8;
 }
 
-* #successBody .success section a:hover {
+* .message-body .message section a:hover {
   text-decoration: underline;
   color: #67b6f4;
 }
@@ -802,20 +811,28 @@ aside ul li a img {
   * body main .contact form #send {
     width: 100%;
   }
-  * #successBody .success {
+  * .message-body .message {
     width: 80vw;
     padding: 8%;
     margin: 0 auto;
   }
-  * #successBody .success section h2 {
+  * .message-body .message section h2 {
     font-size: 36px;
     padding: 0 0 40px 0;
   }
-  * #successBody .success section p {
+  * .message-body .message section p {
     padding: 0 0 20px 0;
     font-size: 20px;
   }
-  * #successBody .success section a {
+  * .message-body .message section ul p {
+    padding: 0 0 20px 0;
+    font-size: 20px;
+  }
+  * .message-body .message section ul li {
+    padding: 0 0 20px 0;
+    font-size: 20px;
+  }
+  * .message-body .message section a {
     font-size: 20px;
   }
 }
@@ -824,7 +841,7 @@ aside ul li a img {
   * body main {
     width: 72vw;
   }
-  * #successBody .success {
+  * .message-body .message {
     width: 72vw;
   }
 }
@@ -833,7 +850,7 @@ aside ul li a img {
   * body main {
     width: 64vw;
   }
-  * #successBody .success {
+  * .message-body .message {
     width: 64vw;
   }
 }
@@ -842,7 +859,7 @@ aside ul li a img {
   * body main {
     width: 48vw;
   }
-  * #successBody .success {
+  * .message-body .message {
     width: 48vw;
   }
 }
@@ -961,16 +978,19 @@ aside ul li a img {
   * body main .contact form #send:hover {
     background-color: #08f6a2;
   }
-  * #successBody .success section h2 {
+  * .message-body .message section h2 {
     color: #eaeaea;
   }
-  * #successBody .success section p {
+  * .message-body .message section p {
     color: #eaeaea;
   }
-  * #successBody .success section a {
+  * .message-body .message section ul li {
+    color: #eaeaea;
+  }
+  * .message-body .message section a {
     color: #ffd679;
   }
-  * #successBody .success section a:hover {
+  * .message-body .message section a:hover {
     color: #ffb300;
   }
 }

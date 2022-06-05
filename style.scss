@@ -371,14 +371,14 @@
 
     }
 
-    #successBody {
+    .message-body {
         width: 100vw;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .success {
+        .message {
             padding: 10%;
 
             section {
@@ -389,6 +389,17 @@
 
                 p {
                     padding: 0 0 10px 0;
+                }
+
+                ul {
+                    p {
+                        padding: 0 0 10px 0;
+                    }
+
+                    li {
+                        color: $font;
+                        padding: 0 0 10px 0;
+                    }
                 }
 
                 a {
@@ -556,26 +567,37 @@
             }
         }
 
-        #successBody {
-            .success {
+        .message-body {
+            .message {
                 width: 80vw;
                 padding: 8%;
                 margin: 0 auto;
-    
-    
+
+
                 section {
                     h2 {
                         font-size: 36px;
                         padding: 0 0 40px 0;
                     }
-    
+
                     p {
                         padding: 0 0 20px 0;
                         font-size: 20px;
                     }
-    
+
+                    ul {
+                        p {
+                            padding: 0 0 20px 0;
+                            font-size: 20px;
+                        }
+
+                        li {
+                            padding: 0 0 20px 0;
+                            font-size: 20px;
+                        }
+                    }
+
                     a {
-                        // right: 0;
                         font-size: 20px;
                     }
                 }
@@ -590,8 +612,8 @@
             }
         }
 
-        #successBody {
-            .success {
+        .message-body {
+            .message {
                 width: 72vw;
             }
         }
@@ -603,9 +625,9 @@
                 width: 64vw;
             }
         }
-        
-        #successBody {
-            .success {
+
+        .message-body {
+            .message {
                 width: 64vw;
             }
         }
@@ -617,9 +639,9 @@
                 width: 48vw;
             }
         }
-       
-        #successBody {
-            .success {
+
+        .message-body {
+            .message {
                 width: 48vw;
             }
         }
@@ -775,23 +797,29 @@
                 }
             }
         }
-        
-        #successBody {
-            .success {
+
+        .message-body {
+            .message {
 
                 section {
                     h2 {
                         color: $font2;
                     }
-    
+
                     p {
                         color: $font2;
                     }
-    
+
+                    ul {
+                        li {
+                            color: $font2;
+                        }
+                    }
+
                     a {
                         color: $link2;
                     }
-    
+
                     a:hover {
                         color: $link2Hover;
                     }

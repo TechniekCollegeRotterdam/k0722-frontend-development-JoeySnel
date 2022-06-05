@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found</title>
+    <link rel="icon" id="faviconTag" href="images/svg/user-ligthmode.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>HTTP Error 404</title>
 </head>
-<body>
-    <h1>404</h1>
-    <p>Not Found</p>
-    <p>The resource requested could not be found on this server!</p>
+
+<body class="message-body">
+    <main class="message">
+        <section>
+            <h2>Error 404</h2>
+            <p>De pagina die u zoekt is mogelijk verwijdert, van naam verandert of tijdelijk niet beschikbaar.
+            </p>
+            <ul>
+                <p>Probeer mogelijk het volgende:</p>
+
+                <li>Zorg ervoor dat het adres van de website weergegeven in uw browsers adresbalk correct is gespeld en
+                    geformatteerd.</li>
+                <li>Als u deze pagina hebt bereikt door op een link te klikken, neem dan contact op met de
+                    websitebeheerder om hen te waarschuwen dat de link onjuist is geformatteerd.</li>
+                <li>Klik <a href="https://joeysnel.nl">hier</a> om een andere link te proberen.</li>
+            </ul>
+        </section>
+    </main>
+
+
+    <script>
+        const faviconTag = document.getElementById('faviconTag');
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+        const changeFavicon = () => {
+            if (isDark.matches) faviconTag.href = 'images/svg/user-darkmode.svg';
+            else faviconTag.href = 'images/svg/user-ligthmode.svg';
+        };
+
+        changeFavicon();
+
+        setInterval(changeFavicon, 200);
+    </script>
 </body>
+
 </html>
