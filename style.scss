@@ -201,21 +201,21 @@
 
                 }
 
-                #videoGif {
-                    width: 100%;
-                    z-index: -1;
-                    border-radius: 3px;
-                }
-
-                // video {
+                // #videoGif {
                 //     width: 100%;
                 //     z-index: -1;
                 //     border-radius: 3px;
                 // }
 
-                // video::-internal-media-controls-overlay-cast-button {
-                //     display: none;
-                // }
+                video {
+                    width: 100%;
+                    z-index: -1;
+                    border-radius: 3px;
+                }
+
+                video::-internal-media-controls-overlay-cast-button {
+                    display: none;
+                }
             }
 
             .links {

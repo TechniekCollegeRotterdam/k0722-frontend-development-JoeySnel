@@ -403,10 +403,14 @@ aside ul li a img {
   padding: 0 0 10px 0;
 }
 
-* body main .portfolio #videoGif {
+* body main .portfolio video {
   width: 100%;
   z-index: -1;
   border-radius: 3px;
+}
+
+* body main .portfolio video::-internal-media-controls-overlay-cast-button {
+  display: none;
 }
 
 * body main .links h2 {
