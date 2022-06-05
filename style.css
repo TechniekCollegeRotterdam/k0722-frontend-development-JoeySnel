@@ -403,7 +403,7 @@ aside ul li a img {
   padding: 0 0 10px 0;
 }
 
-* body main .portfolio video {
+* body main .portfolio #videoGif {
   width: 100%;
   z-index: -1;
   border-radius: 3px;

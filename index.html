@@ -69,7 +69,8 @@
             <p>Een aantal recente projecten waar ik trots op bent. Voorlopig zal deze enkel bestaan uit schoolprojecten,
                 maar in de toekomst zal ik hier nog veel meer aan toevoegen.</p>
             <h3>Javascript game</h3>
-            <video autoplay muted id="my-video" src="videos/fighting-game-video.mp4" alt="Fighting-game video"></video>
+            <img id="videoGif" src="" alt="Fighting-game voorbeeld">
+            <!-- <video autoplay muted id="my-video" src="videos/fighting-game-video.mp4" alt="Fighting-game video"></video> -->
         </section>
         <section class="links">
             <h2>Links</h2>
@@ -153,7 +154,7 @@
     </script>
 
     <script>
-        const video = document.querySelector("#my-video");
+        const video = document.querySelector("#videoGif");
 
         const options2 = {
             root: null,
@@ -165,10 +166,10 @@
             entries.forEach(entry => {
                 console.log(entry.isIntersecting);
                 if (!entry.isIntersecting) {
-                    video.pause();
+                    video.src="images/fighting-game-gif-poster.png";
                     return;
                 };
-                video.play();
+                video.src="images/fighting-game-video.gif"
             });
         }, options2);
 
@@ -187,6 +188,10 @@
         changeFavicon();
 
         setInterval(changeFavicon, 200);
+    </script>
+
+    <script>
+        document.getElementById("my-video").controls = false;
     </script>
 
 </body>
